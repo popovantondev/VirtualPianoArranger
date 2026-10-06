@@ -4,7 +4,7 @@ This is an educational, non-commercial Preview, not a claim that all recognition
 
 ## Application
 
-The current Windows x64 build environment uses CPython 3.14.7, PySide6/PySide6-Essentials/PySide6-Addons/Shiboken6 6.11.2 and PyInstaller 6.22.3. Use a dedicated virtual environment, install these exact versions, then run `python main.py` from the source root. The included piano samples retain the attribution in `assets/offline_piano/ATTRIBUTION.md`.
+The current Windows x64 build environment uses CPython 3.14.7, PySide6/PySide6-Essentials/PySide6-Addons/Shiboken6 6.11.2 and PyInstaller 6.22.3. Use a dedicated virtual environment, install `pip install -r requirements-build.lock.txt`, then run `python main.py` from the source root. The included piano samples retain the attribution in `assets/offline_piano/ATTRIBUTION.md`.
 
 To create a directory-based bundle, run `python -m PyInstaller --clean VirtualPianoArranger.spec`. QML Python modules are excluded because the UI uses Widgets/WebEngineWidgets and QtPdf; native DLL dependencies must not be manually removed. The bundle must be tested with `python verify_packaged.py path/to/VirtualPianoArranger` after preparing its recognition runtime.
 
