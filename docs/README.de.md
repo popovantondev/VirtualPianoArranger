@@ -22,7 +22,7 @@ MIDI öffnen, Stimmen anhören und auswählen. Auch MusicXML, VPA-Projekte und B
 
 **Pausen anzeigen** steht über der Notation und im Tonartdialog. Angezeigt werden echte stille Abschnitte der ausgewählten Stimmen, keine Textabstände oder winzigen MIDI-Artikulationslücken. TXT besitzt keine Dauern: Pausen und automatische Wiedergabe werden nicht erfunden.
 
-[Deutsche Anleitung](../Guide-de.html) · [English guide](../Guide-en.html) · [Русское руководство](../Guide-ru.html)
+[Deutsche Anleitung](https://popovantondev.github.io/VirtualPianoArranger/Guide-de.html) · [English guide](https://popovantondev.github.io/VirtualPianoArranger/Guide-en.html) · [Русское руководство](https://popovantondev.github.io/VirtualPianoArranger/Guide-ru.html)
 
 ## Grenzen
 

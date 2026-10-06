@@ -22,7 +22,7 @@ Windows x64 · Русский / Deutsch / English · Preview
 
 **Показывать паузы** есть над записью и в окне тональности. Знак ставится при настоящей тишине выбранных партий, не вместо пробелов и микрозазоров MIDI. TXT не содержит длительностей: паузы и автоматическое проигрывание не выдумываются.
 
-[Русское руководство](../Guide-ru.html) · [English guide](../Guide-en.html) · [Deutsche Anleitung](../Guide-de.html)
+[Русское руководство](https://popovantondev.github.io/VirtualPianoArranger/Guide-ru.html) · [English guide](https://popovantondev.github.io/VirtualPianoArranger/Guide-en.html) · [Deutsche Anleitung](https://popovantondev.github.io/VirtualPianoArranger/Guide-de.html)
 
 ## Ограничения
 

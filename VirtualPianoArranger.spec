@@ -32,7 +32,11 @@ a = Analysis(
 a.binaries = [
     entry for entry in a.binaries
     if entry[0].replace('\\', '/').rsplit('/', 1)[-1].lower()
-    not in {'icuuc.dll', 'icudt78.dll'}
+    not in {'icuuc.dll', 'icudt78.dll',
+            # QtGui hook collects all platform-input-context plugins. This
+            # QML virtual keyboard is unused; PE inventory confirms its only
+            # importer is this excluded plugin, not WebEngine/PDF/Widgets.
+            'qtvirtualkeyboardplugin.dll', 'qt6virtualkeyboard.dll'}
 ]
 pyz = PYZ(a.pure)
 

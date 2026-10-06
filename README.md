@@ -24,7 +24,7 @@ Open **Key and simplification** above the letters. Preview transposition and cho
 
 ## Guides and limitations
 
-[English guide](Guide-en.html) · [Русское руководство](Guide-ru.html) · [Deutsche Anleitung](Guide-de.html)
+[English guide](https://popovantondev.github.io/VirtualPianoArranger/Guide-en.html) · [Русское руководство](https://popovantondev.github.io/VirtualPianoArranger/Guide-ru.html) · [Deutsche Anleitung](https://popovantondev.github.io/VirtualPianoArranger/Guide-de.html)
 
 MIDI parts currently sound as piano, not their original General MIDI instruments. Some files require explicit approximate-playback consent. WAV recording/export is local; other audio export formats need a separately available FFmpeg. Audio/video transcription and YouTube import are not available. Recognition accuracy, other PCs and long sessions still need review. The Windows EXE is unsigned.
 
