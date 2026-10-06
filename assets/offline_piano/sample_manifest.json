@@ -1,0 +1,653 @@
+{
+  "author": "Alexander Holm",
+  "instrument": "Salamander Grand Piano V3",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source": "https://github.com/darosh/samples-piano-mp3",
+  "packages": [
+    {
+      "url": "https://registry.npmjs.org/@audio-samples/piano-mp3-velocity3/-/piano-mp3-velocity3-1.0.5.tgz",
+      "integrity": "sha512-HPacRGf2T9xkOcu2YZv8+uMgXQ1qI1G+UEkMWL31eK3a+gCNJC4CnQgNrmJl+dRO7jLL4HvDoy2N+DB9g2rSKw=="
+    },
+    {
+      "url": "https://registry.npmjs.org/@audio-samples/piano-mp3-velocity8/-/piano-mp3-velocity8-1.0.5.tgz",
+      "integrity": "sha512-Dqraw6baZOPi0EYE8unF2oX2WViZHPgrDMBGl4ht298XYrAKD9YqPC2QDJpwsH6KccZxW2KpxuQ0/ccMzBptmw=="
+    },
+    {
+      "url": "https://registry.npmjs.org/@audio-samples/piano-mp3-velocity13/-/piano-mp3-velocity13-1.0.5.tgz",
+      "integrity": "sha512-DzhPdnjYxs8pnXo6O0vx7S6LSltVvUPz78hXmRNEiVjEfUiPQv10n/3BLTqKzOGig+VP4FnRkae98EOdlj4UWw=="
+    }
+  ],
+  "files": [
+    {
+      "file": "A0v3.mp3",
+      "midi": 21,
+      "layer": 3,
+      "bytes": 276542,
+      "sha256": "0d116932918a37803ca4bdc5b05ea1b380056a2623b745040af7477c3b6b8b6b"
+    },
+    {
+      "file": "C1v3.mp3",
+      "midi": 24,
+      "layer": 3,
+      "bytes": 289022,
+      "sha256": "6195ee67e80c59b1bbd87870e3dd597dd2db71580bb7c0c01ba5096582213f28"
+    },
+    {
+      "file": "D#1v3.mp3",
+      "midi": 27,
+      "layer": 3,
+      "bytes": 296697,
+      "sha256": "b82769a66770272f7aa28e50f081b6147dd63cb83778ce5f6e67de8f2612ecd2"
+    },
+    {
+      "file": "F#1v3.mp3",
+      "midi": 30,
+      "layer": 3,
+      "bytes": 255764,
+      "sha256": "a3d42a99a48d03a2578845c1e82b6802ae78ac500019cc682228df1333b40e7b"
+    },
+    {
+      "file": "A1v3.mp3",
+      "midi": 33,
+      "layer": 3,
+      "bytes": 267726,
+      "sha256": "e959804d950bdc72029ba6393872fcbd6da5b268b639c808287e78a5e5ac1116"
+    },
+    {
+      "file": "C2v3.mp3",
+      "midi": 36,
+      "layer": 3,
+      "bytes": 275141,
+      "sha256": "ce701bd0931c672af8f46ae1d294231138093931b0e237c09b90c5259a8e439e"
+    },
+    {
+      "file": "D#2v3.mp3",
+      "midi": 39,
+      "layer": 3,
+      "bytes": 303587,
+      "sha256": "2a6ab245b967eafdc48155ba3dfe32cffc96466b8f6db81a3497591f5b805f33"
+    },
+    {
+      "file": "F#2v3.mp3",
+      "midi": 42,
+      "layer": 3,
+      "bytes": 277072,
+      "sha256": "4267ec832a3dc92a9aa79a4c8b6c0db2d82b800e9dfc73fcd6591a6dc7e93c91"
+    },
+    {
+      "file": "A2v3.mp3",
+      "midi": 45,
+      "layer": 3,
+      "bytes": 237809,
+      "sha256": "c76493261d33e7b7d4776fd4171e5a9634e7377dcb9b5db59646cd2dfa65cc6d"
+    },
+    {
+      "file": "C3v3.mp3",
+      "midi": 48,
+      "layer": 3,
+      "bytes": 211120,
+      "sha256": "8d930b15d9b801ba51e3289e54b662d5d12d4a5ef02cb74d59552bb6a5824821"
+    },
+    {
+      "file": "D#3v3.mp3",
+      "midi": 51,
+      "layer": 3,
+      "bytes": 219650,
+      "sha256": "d08b04c20d4ce203a7c6ccd26cbb0b4736fb4db3d1bb3d88bd5b0a3d013fe11f"
+    },
+    {
+      "file": "F#3v3.mp3",
+      "midi": 54,
+      "layer": 3,
+      "bytes": 220401,
+      "sha256": "57510ae483c64655277e60aec7e21ba49999c48abba48e38aa533555550a29dc"
+    },
+    {
+      "file": "A3v3.mp3",
+      "midi": 57,
+      "layer": 3,
+      "bytes": 215889,
+      "sha256": "2b9378a0e2ba1103ea7fec29c89adf3bd5e189ae50086af3fef80213b7e7b213"
+    },
+    {
+      "file": "C4v3.mp3",
+      "midi": 60,
+      "layer": 3,
+      "bytes": 213009,
+      "sha256": "992cd1d7768d392147596144b0c64b378e9d065dbeba909949bd580ee1ea5775"
+    },
+    {
+      "file": "D#4v3.mp3",
+      "midi": 63,
+      "layer": 3,
+      "bytes": 173521,
+      "sha256": "4a51997449feea8bebd899589d0f73fc7dda6b468a2c2653ff431f2f68d4d7c3"
+    },
+    {
+      "file": "F#4v3.mp3",
+      "midi": 66,
+      "layer": 3,
+      "bytes": 159399,
+      "sha256": "6a2473720d6222eae045554bfce1abfbd584a8e93e875230b793de74dd2cd5da"
+    },
+    {
+      "file": "A4v3.mp3",
+      "midi": 69,
+      "layer": 3,
+      "bytes": 166942,
+      "sha256": "732227a40a0c441e217046a2990acfb65611978e15e514a50ab4b5b00b53521d"
+    },
+    {
+      "file": "C5v3.mp3",
+      "midi": 72,
+      "layer": 3,
+      "bytes": 161813,
+      "sha256": "59332a11d5c33c7b602fc995ebbaffaa3d92fd83d8a0e82a3e4df0c0ac6bdf9a"
+    },
+    {
+      "file": "D#5v3.mp3",
+      "midi": 75,
+      "layer": 3,
+      "bytes": 135520,
+      "sha256": "d12ff7bf823d0563a725eb61c81af11e93479a414b1f5f7095d8924060404581"
+    },
+    {
+      "file": "F#5v3.mp3",
+      "midi": 78,
+      "layer": 3,
+      "bytes": 124422,
+      "sha256": "23194bf27d92b2ed69fff42f2022a5720d6bfaa6e667392f85da39bc53867e49"
+    },
+    {
+      "file": "A5v3.mp3",
+      "midi": 81,
+      "layer": 3,
+      "bytes": 86128,
+      "sha256": "24ba91bc457c80f563b21e4a12f595ec46cb1eb4d64c19461f347fa5487448ca"
+    },
+    {
+      "file": "C6v3.mp3",
+      "midi": 84,
+      "layer": 3,
+      "bytes": 76256,
+      "sha256": "45c537f3a77714cc65461c7bfe2319c75cc3176a3c9e212f7d284588ab23e5cf"
+    },
+    {
+      "file": "D#6v3.mp3",
+      "midi": 87,
+      "layer": 3,
+      "bytes": 105017,
+      "sha256": "3a92e2921eace89955bfd54805eff01789bf742a4671add25f7d8f463f6237de"
+    },
+    {
+      "file": "F#6v3.mp3",
+      "midi": 90,
+      "layer": 3,
+      "bytes": 76365,
+      "sha256": "173f080562c950191d035084219ce9ea5485faeb41c14175349964938315d3e4"
+    },
+    {
+      "file": "A6v3.mp3",
+      "midi": 93,
+      "layer": 3,
+      "bytes": 60783,
+      "sha256": "494b70e1e5f1cd47885c706bf6ea121450fc1f196e70cf39033df516ce2522d1"
+    },
+    {
+      "file": "C7v3.mp3",
+      "midi": 96,
+      "layer": 3,
+      "bytes": 52162,
+      "sha256": "221a514a29c271451292f7764fcd8ce577cec1703ef8f4c5be5f88eb6902b415"
+    },
+    {
+      "file": "D#7v3.mp3",
+      "midi": 99,
+      "layer": 3,
+      "bytes": 59544,
+      "sha256": "0b7086ab24a9c273d90b6de5a6678792d2b3b1ee55e8d28ea558380f54045347"
+    },
+    {
+      "file": "F#7v3.mp3",
+      "midi": 102,
+      "layer": 3,
+      "bytes": 81771,
+      "sha256": "ea9a580141317ac2be41433d2e4bf7bff14055f6e7c52cbbcc5b177131a008c3"
+    },
+    {
+      "file": "A7v3.mp3",
+      "midi": 105,
+      "layer": 3,
+      "bytes": 45726,
+      "sha256": "6c0a83b85bce2a132e3ded01f27143b366e42b2e9c55c555ceecbd0b53ebb5a5"
+    },
+    {
+      "file": "C8v3.mp3",
+      "midi": 108,
+      "layer": 3,
+      "bytes": 41035,
+      "sha256": "7037871b3c69f7ce2ccc55a12cd30fe3d23084f1ec159457f7800650c51b9937"
+    },
+    {
+      "file": "A0v8.mp3",
+      "midi": 21,
+      "layer": 8,
+      "bytes": 317747,
+      "sha256": "0e7869511bd3342a63fcb7df2fa1e9c4ab656d93a32d6dc472adbf98e10364d3"
+    },
+    {
+      "file": "C1v8.mp3",
+      "midi": 24,
+      "layer": 8,
+      "bytes": 288101,
+      "sha256": "eca440cecae64d3665235abc0001a1d2ec9e2717ef772268755115ba80acb785"
+    },
+    {
+      "file": "D#1v8.mp3",
+      "midi": 27,
+      "layer": 8,
+      "bytes": 345891,
+      "sha256": "2675110d0f94adfafdd66a0c6d273c6897ccfc0f7419762e9c61590e01a9a690"
+    },
+    {
+      "file": "F#1v8.mp3",
+      "midi": 30,
+      "layer": 8,
+      "bytes": 304678,
+      "sha256": "9e908e308a21501ca3cd936d22922a83041674a1076528a137a31135d1b0d1a1"
+    },
+    {
+      "file": "A1v8.mp3",
+      "midi": 33,
+      "layer": 8,
+      "bytes": 307723,
+      "sha256": "ed415a636cd1ac0f461f55ab3997be6fa1f9877728077a91b89b1114e4339ae2"
+    },
+    {
+      "file": "C2v8.mp3",
+      "midi": 36,
+      "layer": 8,
+      "bytes": 314035,
+      "sha256": "41664af78045c416e98c990d0bab0b6c26c61da63e2a7d62d6dd4dafc5a82167"
+    },
+    {
+      "file": "D#2v8.mp3",
+      "midi": 39,
+      "layer": 8,
+      "bytes": 317075,
+      "sha256": "acd6c32d9a88675c1ae326f14727aae0a3667cc70f9ef7a39b6bc5c1a3a0342c"
+    },
+    {
+      "file": "F#2v8.mp3",
+      "midi": 42,
+      "layer": 8,
+      "bytes": 292012,
+      "sha256": "710685dd1a82b0dfa849c0056b50f4e6836c818c393e582b3c07ff17ddcacd04"
+    },
+    {
+      "file": "A2v8.mp3",
+      "midi": 45,
+      "layer": 8,
+      "bytes": 239448,
+      "sha256": "ea3b12700be31a2d7fa1db672ced04802368f75f08162ce3afd20ee2c56b6b1e"
+    },
+    {
+      "file": "C3v8.mp3",
+      "midi": 48,
+      "layer": 8,
+      "bytes": 212578,
+      "sha256": "790bf54430365989ae14fad704264a46bce4baedced5298d6d700a1d3c7600c6"
+    },
+    {
+      "file": "D#3v8.mp3",
+      "midi": 51,
+      "layer": 8,
+      "bytes": 225299,
+      "sha256": "dcca048dc25de903f86efddfac6b4320597deb4f300cea70f215dd1d900cdca6"
+    },
+    {
+      "file": "F#3v8.mp3",
+      "midi": 54,
+      "layer": 8,
+      "bytes": 227534,
+      "sha256": "e632f2dc532a3158693c026b93698c8ed6c6fc03c9854bb75c887542cef118da"
+    },
+    {
+      "file": "A3v8.mp3",
+      "midi": 57,
+      "layer": 8,
+      "bytes": 231394,
+      "sha256": "298d319fca1ca6934ea5b07d7100002f8dfdbf8cf36fa068c8df8b5a9eb49c13"
+    },
+    {
+      "file": "C4v8.mp3",
+      "midi": 60,
+      "layer": 8,
+      "bytes": 219187,
+      "sha256": "497464f6d8e0455c6b72b35bf7fed1bbd14a382b90bb389c3c88ebf9ffc8a566"
+    },
+    {
+      "file": "D#4v8.mp3",
+      "midi": 63,
+      "layer": 8,
+      "bytes": 197277,
+      "sha256": "423aeb40f9719f32892eb313236b56e39a363e13616fccc7f721ab0427eb9150"
+    },
+    {
+      "file": "F#4v8.mp3",
+      "midi": 66,
+      "layer": 8,
+      "bytes": 176999,
+      "sha256": "eefc4e8bc71867c06dbb5c926bff50ccde942d19ee885e958ec110186cf631b1"
+    },
+    {
+      "file": "A4v8.mp3",
+      "midi": 69,
+      "layer": 8,
+      "bytes": 173442,
+      "sha256": "c5270f435ab7100e6fa4a363d985b7a41ab1c20ea0d12dd8fc1106e7e753cd7c"
+    },
+    {
+      "file": "C5v8.mp3",
+      "midi": 72,
+      "layer": 8,
+      "bytes": 172477,
+      "sha256": "9748a6d4668a571291983c3dbe3907cb3597a17f33cdb63672f25043c685b028"
+    },
+    {
+      "file": "D#5v8.mp3",
+      "midi": 75,
+      "layer": 8,
+      "bytes": 142556,
+      "sha256": "88ed771278770d796255976303d3645252f2b4299cf865df51d8e9ad44df84d1"
+    },
+    {
+      "file": "F#5v8.mp3",
+      "midi": 78,
+      "layer": 8,
+      "bytes": 130413,
+      "sha256": "7a0830da67ed80a322f9bd3718ef0050c8ba8a4588f7f33599b1719ad0fbdb67"
+    },
+    {
+      "file": "A5v8.mp3",
+      "midi": 81,
+      "layer": 8,
+      "bytes": 135673,
+      "sha256": "4d8c5386a638ec0fd1f70081bf4b51cae2b8f6acf7ffc849052c37bb49da142c"
+    },
+    {
+      "file": "C6v8.mp3",
+      "midi": 84,
+      "layer": 8,
+      "bytes": 95919,
+      "sha256": "583f570482c22e94fe37df0e31cadb005ba9f9ce742cc465311ba06c235d994d"
+    },
+    {
+      "file": "D#6v8.mp3",
+      "midi": 87,
+      "layer": 8,
+      "bytes": 104470,
+      "sha256": "fecea39137ab19a7a45a5fe97e9b338eddbab7bd9bb15746cf185f49ddcfa4e9"
+    },
+    {
+      "file": "F#6v8.mp3",
+      "midi": 90,
+      "layer": 8,
+      "bytes": 83193,
+      "sha256": "f6dd2f92614e9e07f10e0928f31ec887f6f5540952a2991b478d824ad3ffb087"
+    },
+    {
+      "file": "A6v8.mp3",
+      "midi": 93,
+      "layer": 8,
+      "bytes": 73955,
+      "sha256": "1b9106440f720f7120c7ef723e4b8c95bb887e4b3d3d57d6f84bf56d34ec9535"
+    },
+    {
+      "file": "C7v8.mp3",
+      "midi": 96,
+      "layer": 8,
+      "bytes": 48513,
+      "sha256": "86faf0061f6aa4e47c8b50a656650bc3a274dbd3281668fcdd7bdebec9eaf9ec"
+    },
+    {
+      "file": "D#7v8.mp3",
+      "midi": 99,
+      "layer": 8,
+      "bytes": 57956,
+      "sha256": "93af8aeafe102ac69c7ccfc447589a118392b4eb37d3a03cecc222cab8842d44"
+    },
+    {
+      "file": "F#7v8.mp3",
+      "midi": 102,
+      "layer": 8,
+      "bytes": 84955,
+      "sha256": "47ded87b96753c7f763b2f70ee777fd406fb369e0e29d957375a07e8c91bbcc6"
+    },
+    {
+      "file": "A7v8.mp3",
+      "midi": 105,
+      "layer": 8,
+      "bytes": 44296,
+      "sha256": "08d8de462746153691f3ce4b3d822633713a324960f8861a172d46ffbe1bb02a"
+    },
+    {
+      "file": "C8v8.mp3",
+      "midi": 108,
+      "layer": 8,
+      "bytes": 56836,
+      "sha256": "e1ecc25a213df0fe9493de7ffb101678a5d974fbbee84f0cf21e05fa9e7e40fc"
+    },
+    {
+      "file": "A0v13.mp3",
+      "midi": 21,
+      "layer": 13,
+      "bytes": 332894,
+      "sha256": "2879600a5af91e05c8eb1dbbcb4074b15a19b0fad9dc7de9880fe495f343d338"
+    },
+    {
+      "file": "C1v13.mp3",
+      "midi": 24,
+      "layer": 13,
+      "bytes": 294369,
+      "sha256": "3332d9b677879406b7c9ee85d212798db854d302dad9e0ab55a8a1cc60501497"
+    },
+    {
+      "file": "D#1v13.mp3",
+      "midi": 27,
+      "layer": 13,
+      "bytes": 351074,
+      "sha256": "95f70cbb01dbc285de7c30ca9cd0f8684b0792c9b4c4650da44057e5f0b8ad7d"
+    },
+    {
+      "file": "F#1v13.mp3",
+      "midi": 30,
+      "layer": 13,
+      "bytes": 307006,
+      "sha256": "a70aacc61f1d13043e87b669112eee9749b4ec62a4014eae2b4e0ae73fc55a55"
+    },
+    {
+      "file": "A1v13.mp3",
+      "midi": 33,
+      "layer": 13,
+      "bytes": 319832,
+      "sha256": "36fe96fba148cb04128aeefa20e4028fa97d20f94d847af49d844fc0e40018f4"
+    },
+    {
+      "file": "C2v13.mp3",
+      "midi": 36,
+      "layer": 13,
+      "bytes": 316759,
+      "sha256": "b6a5c6181726508f36bcce7b84f65b8e3d648e2d57d0f3f556c006669736f6ec"
+    },
+    {
+      "file": "D#2v13.mp3",
+      "midi": 39,
+      "layer": 13,
+      "bytes": 319996,
+      "sha256": "a1d5cdd0597f0574dc35feedfe506c4f25d1fa247806581f584ef8416ec8d4a0"
+    },
+    {
+      "file": "F#2v13.mp3",
+      "midi": 42,
+      "layer": 13,
+      "bytes": 296508,
+      "sha256": "1575266e531278c0c63ca6ca2cd12318689a762b4fca7d2f928b663af71d1b9b"
+    },
+    {
+      "file": "A2v13.mp3",
+      "midi": 45,
+      "layer": 13,
+      "bytes": 244033,
+      "sha256": "fafd9fafe526b7ab177b179e04ea908cc04efee7e9371a9f58247649d8be4529"
+    },
+    {
+      "file": "C3v13.mp3",
+      "midi": 48,
+      "layer": 13,
+      "bytes": 216328,
+      "sha256": "5d389edd1d8278caab6c5bb5da188715628ea507b4188a369c5a07585acb9696"
+    },
+    {
+      "file": "D#3v13.mp3",
+      "midi": 51,
+      "layer": 13,
+      "bytes": 219809,
+      "sha256": "cb3e4a24d8b83239ca1521f5cec92be29a559963ee3a71f86e25367567897042"
+    },
+    {
+      "file": "F#3v13.mp3",
+      "midi": 54,
+      "layer": 13,
+      "bytes": 229877,
+      "sha256": "6ecaa666c7e0c2a0d62f8ab684c934884f7157613bc4518b0162090826273a95"
+    },
+    {
+      "file": "A3v13.mp3",
+      "midi": 57,
+      "layer": 13,
+      "bytes": 223824,
+      "sha256": "2843c3561f4c2447c5e27eda4c79659a618c9e3acfd8bbf65b4b6c7c513e31c0"
+    },
+    {
+      "file": "C4v13.mp3",
+      "midi": 60,
+      "layer": 13,
+      "bytes": 209730,
+      "sha256": "8b482d6acc5d6f2ed9db36e03b04379b1d15cdc83159f6e9fa08428d3aa1f21d"
+    },
+    {
+      "file": "D#4v13.mp3",
+      "midi": 63,
+      "layer": 13,
+      "bytes": 190713,
+      "sha256": "55b50e9c0e00f513f6618624a4894eec03661957169cac459c301afed73415a2"
+    },
+    {
+      "file": "F#4v13.mp3",
+      "midi": 66,
+      "layer": 13,
+      "bytes": 175472,
+      "sha256": "f7fb6c289be11797df3098e25690d283ed9f08ac41e9c795969565d2ce57a85b"
+    },
+    {
+      "file": "A4v13.mp3",
+      "midi": 69,
+      "layer": 13,
+      "bytes": 179151,
+      "sha256": "0bd4809b7ec8d71319c495941c82c52aff464d709520c33221de59aca016ee2c"
+    },
+    {
+      "file": "C5v13.mp3",
+      "midi": 72,
+      "layer": 13,
+      "bytes": 174187,
+      "sha256": "4832d7d23b41779a334c747caf6203c2e6dc44e24922232134f3019e7c57f04b"
+    },
+    {
+      "file": "D#5v13.mp3",
+      "midi": 75,
+      "layer": 13,
+      "bytes": 144377,
+      "sha256": "3591061a5561d59a2af0834574e8bc3e8163dd1135c5f9e846e4d5990916871b"
+    },
+    {
+      "file": "F#5v13.mp3",
+      "midi": 78,
+      "layer": 13,
+      "bytes": 128233,
+      "sha256": "c481280db4e765a5acaf890cdb37ad7d00d9dc5f1ebfa37dd35fcf61ca2e4a68"
+    },
+    {
+      "file": "A5v13.mp3",
+      "midi": 81,
+      "layer": 13,
+      "bytes": 133274,
+      "sha256": "812a1bff28e5587986a1238aa56a3316f99d0d930f1488dbcdbfe77d91703615"
+    },
+    {
+      "file": "C6v13.mp3",
+      "midi": 84,
+      "layer": 13,
+      "bytes": 93780,
+      "sha256": "029cf37471267947ed74c87dbf7cafe57f48fdeecc40bc249f7080f67f02cb0a"
+    },
+    {
+      "file": "D#6v13.mp3",
+      "midi": 87,
+      "layer": 13,
+      "bytes": 107233,
+      "sha256": "f759e421a51ccafbb7d14644c7e3756c66e046385a9d3786f209f2dc1999488f"
+    },
+    {
+      "file": "F#6v13.mp3",
+      "midi": 90,
+      "layer": 13,
+      "bytes": 81555,
+      "sha256": "b95e1a954071628b9cef27fb8dc738d9c04e49c86a32de910adc8ae9f67aa187"
+    },
+    {
+      "file": "A6v13.mp3",
+      "midi": 93,
+      "layer": 13,
+      "bytes": 76553,
+      "sha256": "e4c9b9ff65253c6c67770f754cc6e46fd2fe712abfa2fd855c0faffbd03af915"
+    },
+    {
+      "file": "C7v13.mp3",
+      "midi": 96,
+      "layer": 13,
+      "bytes": 56228,
+      "sha256": "200e0b09585ae5b2a02366291b548ab760de258fcdaabfc108d732aff8153913"
+    },
+    {
+      "file": "D#7v13.mp3",
+      "midi": 99,
+      "layer": 13,
+      "bytes": 57875,
+      "sha256": "81b1dbad7d2024e3adf68392c8714a252d0d08e0be1e3917b48ec35653b657bf"
+    },
+    {
+      "file": "F#7v13.mp3",
+      "midi": 102,
+      "layer": 13,
+      "bytes": 78727,
+      "sha256": "8531576569a2cc29dc121e51f895817df18c3b6a7f656d1825f2fa2b0b6b75e8"
+    },
+    {
+      "file": "A7v13.mp3",
+      "midi": 105,
+      "layer": 13,
+      "bytes": 44347,
+      "sha256": "36739f3c0af1cc653ccb001d2f8466e915d5b64b48b5059c0ceda2ec00b9cce1"
+    },
+    {
+      "file": "C8v13.mp3",
+      "midi": 108,
+      "layer": 13,
+      "bytes": 57252,
+      "sha256": "ad00217376b0191b817f662b6cc4d3be99a442807550c59ce5baeccd8aba71ca"
+    }
+  ]
+}

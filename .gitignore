@@ -1,0 +1,7 @@
+.ai-dev/
+__pycache__/
+.venv/
+build/
+dist/
+*.pyc
+runtimes/

@@ -1,0 +1,29 @@
+:root{color-scheme:dark;--gold:#dfb87c;--ink:#f1ece3;--muted:#b5b2ac;--panel:#202329}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:radial-gradient(ellipse at 75% 0,#383127 0,transparent 45%),#111317;color:var(--ink);font:17px/1.75 system-ui,sans-serif}
+a{color:var(--gold);text-underline-offset:4px}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:5px;border-radius:3px}
+main{max-width:1180px;margin:auto;padding:28px 32px 60px}
+nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid #514737;padding-bottom:18px;font-size:14px}
+nav a[aria-current]{color:var(--ink)}
+.hero{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:32px;padding:56px 0 40px}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(30px,4vw,49px);line-height:1.16;letter-spacing:-.035em;margin:16px 0 22px;font-weight:650}
+.subtitle{color:var(--muted);max-width:42ch}
+.hero figure{margin:0}
+.hero img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 24px 60px #0008}
+figcaption{font-size:12px;color:var(--muted);margin-top:12px}
+.button{display:inline-block;padding:10px 22px;border:1px solid #c69c61;border-radius:8px;background:linear-gradient(#e5c38d,#c69c61);color:#17140e;text-decoration:none;font-weight:600}
+.contents{display:flex;gap:10px 24px;flex-wrap:wrap;margin:0 0 28px;padding:18px 0;border-block:1px solid #514737;font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+section.card{background:linear-gradient(145deg,#282b31,var(--panel));border:1px solid #45423b;border-radius:14px;padding:28px;scroll-margin-top:24px}
+.card .number{color:var(--gold);font-size:12px;letter-spacing:.15em}
+h2{font-size:23px;line-height:1.3;margin:12px 0 16px;font-weight:600}
+p{overflow-wrap:anywhere}
+.card p{margin:0;color:#d1cec7}
+.card:last-child{grid-column:1/-1;border-color:#6e593b}
+footer{margin-top:34px;color:var(--muted);font-size:13px;border-top:1px solid #514737;padding-top:20px}
+@media(max-width:800px){main{padding:24px}.hero{grid-template-columns:1fr;padding-top:36px;gap:24px}.hero figure{max-width:620px}.steps{grid-template-columns:1fr}}
+@media(max-width:520px){main{padding:18px 16px 36px}nav{gap:16px}.hero{padding:28px 0}.hero figure{display:none}.card{padding:22px!important}.contents{gap:10px 18px}h1{font-size:34px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
