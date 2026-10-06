@@ -43,7 +43,7 @@ with tempfile.TemporaryDirectory(prefix="vpa-exe-check-") as folder:
             detail=report.read_text(encoding="utf-8") if report.exists() else "no report"
             raise SystemExit(f"Packaged Studio failed {platform}: {result.returncode}; {detail}")
         data=json.loads(report.read_text(encoding="utf-8"))
-        if not data.get("ok") or not data.get("recognitionXml"):
+        if not data.get("ok") or not data.get("recognitionXml") or not data.get("pdfRendered"):
             raise SystemExit(f"Studio reported failure: {data}")
-        print(f"PASS {platform}: Studio, 61 keys, {data['ui']['samples']} decoded samples, bundled HOMR/XML imports ({data['seconds']}s)")
+        print(f"PASS {platform}: Studio, 61 keys, {data['ui']['samples']} decoded samples, QtPdf rasterization, bundled HOMR/XML imports ({data['seconds']}s)")
 print("PASS: standalone Studio EXE verified; musical recognition accuracy and audible quality require owner review")

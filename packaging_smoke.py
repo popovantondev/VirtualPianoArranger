@@ -4,9 +4,13 @@ import os
 from pathlib import Path
 import subprocess
 import time
+import tempfile
 
-from PySide6.QtCore import QObject, QTimer
+from PySide6.QtCore import QObject, QTimer, QSize, Qt
+from PySide6.QtGui import QPainter, QPdfWriter
+from PySide6.QtPdf import QPdfDocument
 from PySide6.QtWidgets import QApplication
+from shiboken6 import delete as delete_qt_object
 
 from project_io import atomic_write_text
 from recognition import homr_command
@@ -54,6 +58,30 @@ class StudioSmoke(QObject):
         if data.get("keys")!=61 or not data.get("empty") or data.get("samples",0)<30:
             self.finish({"ok":False,"error":"Incomplete Studio resources","ui":data},1);return
         try:
+            # Exercise actual QtPdf/PDFium loading and rasterization, not just
+            # an import. This original one-page fixture uses no owner document.
+            with tempfile.TemporaryDirectory(prefix="vpa-pdf-smoke-") as folder:
+                pdf_path = str(Path(folder) / "original-demo.pdf")
+                writer = QPdfWriter(pdf_path)
+                writer.setResolution(72)
+                painter = QPainter(writer)
+                painter.fillRect(20, 20, 120, 80, Qt.GlobalColor.black)
+                painter.end()
+                del painter
+                del writer
+                document = QPdfDocument(self)
+                try:
+                    if document.load(pdf_path) != QPdfDocument.Error.None_ or document.pageCount() != 1:
+                        raise RuntimeError("Packaged QtPdf could not open the original fixture")
+                    image = document.render(0, QSize(160, 220))
+                    if image.isNull() or not any(
+                        image.pixelColor(x, y).alpha() > 0 and image.pixelColor(x, y).lightness() < 100
+                        for x in range(image.width()) for y in range(image.height())
+                    ):
+                        raise RuntimeError("Packaged QtPdf did not rasterize the fixture")
+                finally:
+                    document.close()
+                    delete_qt_object(document)
             exe=self.window.bridge.controller.homr_exe()
             args=homr_command(exe,Path("unused-smoke-input.png"))
             packages=str(exe.parent.parent/"site-packages")
@@ -69,4 +97,4 @@ class StudioSmoke(QObject):
                 raise RuntimeError("Bundled recognition imports failed: "+process.stderr[-1500:])
         except (OSError,RuntimeError,subprocess.TimeoutExpired) as error:
             self.finish({"ok":False,"ui":data,"error":str(error)},1);return
-        self.finish({"ok":True,"ui":data,"recognitionImports":True,"recognitionXml":True,"console":self.errors[-5:]},0)
+        self.finish({"ok":True,"ui":data,"pdfRendered":True,"recognitionImports":True,"recognitionXml":True,"console":self.errors[-5:]},0)
