@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "name": "Virtual Piano Arranger",
+  "repo": "VirtualPianoArranger",
+  "version": "0.1.0-preview.1",
+  "platform": "Windows · x64",
+  "status": "preview",
+  "tag": "v0.1.0-preview.1",
+  "source_url": "https://github.com/popovantondev/VirtualPianoArranger",
+  "release_url": "https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1",
+  "description": {
+    "ru": "Офлайн-пианино, буквенная запись и импорт выбранных партий MIDI. Распознавание нот экспериментальное.",
+    "de": "Offline-Klavier, Buchstabennotation und Import ausgewählter MIDI-Stimmen. Notenerkennung experimentell.",
+    "en": "Offline piano, letter notation and selected MIDI part import. Score recognition is experimental."
+  },
+  "requirements": {
+    "ru": "Windows x64; Python/Qt и отдельный runtime распознавания включены. EXE без цифровой подписи.",
+    "de": "Windows x64; Python/Qt und separate Erkennungslaufzeit enthalten. EXE unsigniert.",
+    "en": "Windows x64; Python/Qt and separate recognition runtime bundled. EXE unsigned."
+  },
+  "start": {
+    "ru": "Распакуйте весь portable, сверьте SHA-256, откройте VirtualPianoArranger.exe.",
+    "de": "Portable vollständig entpacken, SHA-256 prüfen, VirtualPianoArranger.exe öffnen.",
+    "en": "Extract the entire portable folder, verify SHA-256, start VirtualPianoArranger.exe."
+  },
+  "readmes": {"en": ["README.md"], "ru": ["docs/README.ru.md"], "de": ["docs/README.de.md"]},
+  "guides": {"en": "Guide-en.html", "ru": "Guide-ru.html", "de": "Guide-de.html"},
+  "help_url": "https://popovantondev.github.io/VirtualPianoArranger/Guide-{lang}.html",
+  "feedback_url": "https://github.com/popovantondev/VirtualPianoArranger/issues/new",
+  "assets": [
+    {
+      "name": "VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip",
+      "size": 517677323,
+      "sha256": "6ca79295cae83c4cb6eb43e84c4fe9c527b4ad1ae32733b88af91afaa454b4e6",
+      "url": "https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip"
+    },
+    {
+      "name": "VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip",
+      "size": 1782767715,
+      "sha256": "322206aa1d7eebb2c1fde72484b07f5f9245d11c29a8d7b2959bcd7a410a97a7",
+      "url": "https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt"
+    },
+    {
+      "name": "release-manifest.json",
+      "url": "https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/release-manifest.json"
+    }
+  ],
+  "downloads": ["VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip"],
+  "checksums": ["SHA256SUMS.txt"],
+  "version_files": [{"path": "VERSION", "pattern": "^\\s*(\\S+)\\s*$"}]
+}
