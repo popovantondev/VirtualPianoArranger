@@ -1,12 +1,22 @@
-# Virtual Piano Arranger
+[Русский](docs/README.ru.md) · [Deutsch](docs/README.de.md) · [English](README.md)
 
-[English](README.md) · [Русский](docs/README.ru.md) · [Deutsch](docs/README.de.md)
+![Virtual Piano Arranger](assets/readme-banner-en.svg)
+
+*Illustrative laptop mockup; not a device compatibility test.*
+
+**[Download](https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1)** · **[User guide](https://popovantondev.github.io/VirtualPianoArranger/Guide-en.html)** · **[Report a problem](https://github.com/popovantondev/VirtualPianoArranger/issues/new)**
+
+## Features
+
+| MIDI · part selection | Letter notation |
+|---|---|
+| Piano sound and WAV | Key preview |
+
+# Virtual Piano Arranger
 
 An offline piano with letter notation, MIDI part selection and score adaptation for a 61-key computer keyboard.
 
 An educational, non-commercial demonstration project for exploring music software and its capabilities. The author is not selling this application. This describes the project's purpose, not a restriction on rights granted by MIT or third-party licenses. It does not imply affiliation with or endorsement by component authors.
-
-![Virtual Piano Arranger in English on a Windows laptop — illustrative mockup](assets/surface-laptop-en-v1.png)
 
 Windows x64 · English / Русский / Deutsch · 0.1.0-preview.1
 
