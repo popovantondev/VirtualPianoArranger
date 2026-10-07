@@ -16,7 +16,7 @@ The verified child interpreter is Windows x64 CPython 3.11.9. `requirements-reco
 
 Place the unmodified HOMR ONNX files listed in `MODEL_PROVENANCE.md` into `homr/segmentation` (segnet) and `homr/transformer` (encoder/decoder). Keep RapidOCR's listed ONNX files under `rapidocr/models`. Verify their hashes before creating the child-runtime copy. The original PyTorch checkpoints are corresponding model-source materials, not files that must be executed by the end-user runtime. Use `packaging/prepare_recognition.ps1 -PythonHome <CPython311Directory> -SitePackages <PreparedPackagesDirectory>` from the source tree, then use `packaging/build_review.ps1 -BuildPython <HostPythonExecutable> -OutputDirectory <NewDirectoryUnderDist>` for an isolated build and startup/PDF smoke checks. Never overwrite an existing runtime or candidate.
 
-Full binary distribution materials, dependency locks, corresponding sources and replacement instructions are being completed before the downloadable EXE is released. This source snapshot contains neither HOMR/model binaries nor Qt/Python runtime binaries. Audio/video transcription and YouTube import are not available; preparatory code does not establish those features as working.
+The Windows Preview's portable and companion source archives are supplied together with dependency locks, notices and library-replacement instructions. This Git source snapshot contains neither HOMR/model binaries nor Qt/Python runtime binaries. Audio/video transcription and YouTube import are not available; preparatory code does not establish those features as working.
 
 ## Verification
 

@@ -8,9 +8,9 @@
 
 ![Иллюстрация Virtual Piano Arranger на ноутбуке Windows](../assets/surface-laptop-v1.png)
 
-Windows x64 · Русский / Deutsch / English · Preview
+Windows x64 · Русский / Deutsch / English · 0.1.0-preview.1
 
-Публичного скачивания пока нет: готовим portable-выпуск и документы сторонних компонентов.
+[Скачать portable для Windows](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip) · [SHA-256](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) · [Соответствующие исходники](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip)
 
 ## Начало работы
 
@@ -30,4 +30,4 @@ MIDI звучит пианино, а не исходными инструмен�
 
 Собственный код приложения распространяется по [MIT](../LICENSE). Сторонний код, сэмплы пианино и модели сохраняют свои лицензии: MIT их не заменяет.
 
-У будущего ZIP будет отдельный файл SHA-256. Сохраняйте папку целиком, лицензии и уведомления. Документы для распространения runtime и моделей ещё проверяются перед публичным выпуском.
+Сохраняйте папку целиком, лицензии и уведомления. У выпуска есть отдельные исходники и SHA-256; прочитайте [уведомления](../DISTRIBUTION_NOTICES.md), [происхождение моделей](../MODEL_PROVENANCE.md) и [инструкцию замены библиотек](../LIBRARY_REPLACEMENT.md). Preview не означает, что проверены все партитуры или все компьютеры Windows.

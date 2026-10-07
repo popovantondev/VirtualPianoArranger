@@ -8,9 +8,9 @@ An educational, non-commercial demonstration project for exploring music softwar
 
 ![Virtual Piano Arranger in English on a Windows laptop — illustrative mockup](assets/surface-laptop-en-v1.png)
 
-Windows x64 · English / Русский / Deutsch · Preview
+Windows x64 · English / Русский / Deutsch · 0.1.0-preview.1
 
-No public download is available yet. The portable release and third-party distribution materials are being prepared.
+[Download Windows portable](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip) · [SHA-256](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) · [Corresponding sources](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip)
 
 ## First steps
 
@@ -30,4 +30,4 @@ MIDI parts currently sound as piano, not their original General MIDI instruments
 
 The application's original code is licensed under [MIT](LICENSE). Third-party code, piano samples and model files retain their own licenses; MIT does not relicense those components.
 
-The eventual portable ZIP will have a companion SHA-256 file. Keep the complete folder, notices and license texts. Runtime and model distribution materials are still being verified before public release.
+Keep the complete portable folder, license texts and notices. The release includes a companion source archive and SHA-256 file; read [distribution notices](DISTRIBUTION_NOTICES.md), [model provenance](MODEL_PROVENANCE.md) and [library replacement instructions](LIBRARY_REPLACEMENT.md). This is a Preview, not an assertion that every score or Windows PC has been tested.

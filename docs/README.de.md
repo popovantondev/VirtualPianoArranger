@@ -8,9 +8,9 @@ Ein nichtkommerzielles Lern- und Demonstrationsprojekt zur Erkundung von Musikso
 
 ![Illustration von Virtual Piano Arranger auf Deutsch auf einem Windows-Laptop](../assets/surface-laptop-de-v1.png)
 
-Windows x64 · Deutsch / Русский / English · Preview
+Windows x64 · Deutsch / Русский / English · 0.1.0-preview.1
 
-Noch kein öffentlicher Download: Portable-Paket und Unterlagen zu Drittanbieterkomponenten werden vorbereitet.
+[Windows-Portable herunterladen](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip) · [SHA-256](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) · [Zugehörige Quellen](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip)
 
 ## Erste Schritte
 
@@ -30,4 +30,4 @@ MIDI-Stimmen erklingen als Klavier, nicht mit ursprünglichen General-MIDI-Instr
 
 Der eigene Anwendungscode steht unter [MIT](../LICENSE). Drittanbietercode, Klaviersamples und Modelle behalten ihre jeweiligen Lizenzen; MIT ersetzt diese nicht.
 
-Die spätere ZIP erhält eine separate SHA-256-Datei. Den ganzen Ordner, Lizenzen und Hinweise behalten. Unterlagen zur Verteilung von Laufzeit und Modellen werden vor der Veröffentlichung noch geprüft.
+Den ganzen Ordner, Lizenzen und Hinweise behalten. Zum Release gehören Quellen und SHA-256; siehe [Hinweise](../DISTRIBUTION_NOTICES.md), [Modellherkunft](../MODEL_PROVENANCE.md) und [Bibliotheksaustausch](../LIBRARY_REPLACEMENT.md). Preview bedeutet nicht, dass alle Partituren oder Windows-PCs getestet wurden.
