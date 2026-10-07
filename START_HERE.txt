@@ -1,0 +1,28 @@
+Virtual Piano Arranger — Preview for Windows x64
+
+RU: Распакуйте папку полностью и запустите VirtualPianoArranger.exe.
+Инструкция: Guide-ru.html. Сохраняйте EXE вместе с _internal и runtimes.
+Распознавание нот экспериментальное; MIDI звучит пианино.
+Видео/аудио-распознавание и YouTube пока не реализованы. EXE не подписана.
+
+DE: Den gesamten Ordner entpacken und VirtualPianoArranger.exe starten.
+Anleitung: Guide-de.html. _internal und runtimes nicht entfernen.
+Notenerkennung ist experimentell; MIDI wird als Klavier wiedergegeben.
+Audio-/Videoerkennung und YouTube sind nicht enthalten. EXE unsigniert.
+
+EN: Extract the entire folder and run VirtualPianoArranger.exe.
+Guide: Guide-en.html. Keep _internal and runtimes beside the EXE.
+Score recognition is experimental; MIDI plays as piano.
+Audio/video recognition and YouTube import are not included. EXE unsigned.
+
+OPEN-SOURCE NOTICES / LIZENZEN / ЛИЦЕНЗИИ
+Qt/PySide 6.11.2: LGPLv3 plus applicable third-party licenses.
+HOMR 0.7.0 and its weights: AGPL. RapidOCR models: Apache-2.0.
+Salamander piano recordings (Alexander Holm): CC BY 3.0.
+VPA original code: MIT. This does not relicense third-party components.
+Read DISTRIBUTION_NOTICES.md, MODEL_PROVENANCE.md and licenses/.
+Corresponding source materials accompany the release.
+Compatible libraries may be replaced: LIBRARY_REPLACEMENT.md.
+
+Project: https://github.com/popovantondev/VirtualPianoArranger
+Issues: https://github.com/popovantondev/VirtualPianoArranger/issues
