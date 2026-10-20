@@ -42,10 +42,14 @@
     },
     {
       "name": "SHA256SUMS.txt",
+      "size": 259,
+      "sha256": "56743ecdd09999ef64e5f4fefe29b5ec4481dd64e412d65dda6c81991e241437",
       "url": "https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt"
     },
     {
       "name": "release-manifest.json",
+      "size": 652,
+      "sha256": "ffe23bd9425532e68fcb67f6d58a5adcfec31e67849aa4b41fb8ae66b7b03cb3",
       "url": "https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/release-manifest.json"
     }
   ],
