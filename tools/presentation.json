@@ -1,0 +1,33 @@
+{
+  "folder": ".",
+  "shots": {
+    "ru": "assets/surface-laptop-v1.png",
+    "de": "assets/surface-laptop-de-v1.png",
+    "en": "assets/surface-laptop-en-v1.png"
+  },
+  "icon": "presentation-icon.png",
+  "palette": {
+    "accent": "#815c20",
+    "tint": "#f8efdc",
+    "hero": "#30291f",
+    "hero-end": "#6c5835"
+  },
+  "flow": {
+    "ru": [
+      "Играть на пианино",
+      "Работать с буквенной нотацией",
+      "Собирать MIDI-партии"
+    ],
+    "de": [
+      "Klavier spielen",
+      "Mit Buchstabennotation arbeiten",
+      "MIDI-Stimmen arrangieren"
+    ],
+    "en": [
+      "Play the piano",
+      "Work with letter notation",
+      "Arrange MIDI parts"
+    ]
+  },
+  "caption": "illustration"
+}
