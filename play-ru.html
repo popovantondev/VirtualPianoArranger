@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="light dark">
+<title>Virtual Piano Arranger — пианино в браузере</title>
+<meta name="description" content="Пианино на 61 клавишу прямо в браузере: играй мышкой, пальцем или буквами с клавиатуры. Без установки, ничего не отправляется.">
+<link rel="icon" href="presentation-icon.png">
+<link rel="alternate" hreflang="ru" href="play-ru.html">
+<link rel="alternate" hreflang="de" href="play-de.html">
+<link rel="alternate" hreflang="en" href="play-en.html">
+<script src="assets/kit/kit-theme.js"></script><link rel="stylesheet" href="assets/kit/kit.css?v=2026.11.05-1"><link rel="stylesheet" href="theme.css?v=2026.11.05-1"><script src="assets/kit/programs.js?v=2026.11.05-1" defer></script><script src="assets/kit/kit.js?v=2026.11.05-1" defer></script>
+<link rel="stylesheet" href="web/play.css?v=3">
+<script type="module" src="web/js/app.js?v=2"></script>
+</head>
+<body class="ppk-page play-page" data-ppk-slash="off">
+<a class="ppk-skip" href="#play">К пианино</a>
+<div class="ppk-nav-wrap" id="ppk-nav-wrap">
+  <nav class="ppk-nav" aria-label="Основная навигация">
+    <a class="ppk-brand" href="index-ru.html"><img src="presentation-icon.png" alt="" width="34" height="34"><span>Virtual Piano Arranger</span></a>
+    <span class="ppk-spacer"></span>
+    <a class="ppk-back" href="https://popovantondev.github.io/popovantondev/index-ru.html">← Все программы</a>
+    <button class="ppk-search-btn" type="button" data-ppk-open-search aria-label="Поиск по программам"><span>Поиск</span><kbd>Ctrl K</kbd></button>
+    <div class="ppk-langs"><a href="play-ru.html" lang="ru" hreflang="ru" aria-current="page">RU</a><a href="play-de.html" lang="de" hreflang="de">DE</a><a href="play-en.html" lang="en" hreflang="en">EN</a></div>
+    <button class="ppk-icon-btn ppk-theme-btn" type="button" data-ppk-theme aria-label="Сменить тему"></button>
+    <a class="ppk-icon-btn ppk-gh-btn" href="https://github.com/popovantondev/VirtualPianoArranger" aria-label="GitHub"></a>
+  </nav>
+</div>
+
+<main id="content">
+  <section class="hero" aria-labelledby="page-title">
+    <p class="tag"><span class="dot" aria-hidden="true"></span>Virtual Piano Arranger · веб-версия</p>
+    <h1 id="page-title">Играй на пианино <em>прямо в браузере</em></h1>
+    <p class="lead">Мышкой, пальцем или буквами с клавиатуры. Без установки и без регистрации.</p>
+    <nav class="page-menu" aria-label="Разделы страницы">
+      <a href="#play">Играть</a>
+      <a href="#sheet">Ноты</a>
+      <a href="#midi">MIDI</a>
+      <a href="#demos">Демо</a>
+      <a href="#about">О программе</a>
+    </nav>
+  </section>
+
+  <section class="stage" id="play" aria-labelledby="play-title" data-keyboard-label="Пианино на 61 клавишу, C2–C7">
+    <h2 id="play-title" class="visually-hidden">Пианино</h2>
+    <canvas class="glow-canvas" id="glow-canvas" aria-hidden="true"></canvas>
+    <div class="stage-card glass">
+      <div class="piano-heading">
+        <div class="piano-title">
+          <p class="piano-eyebrow">SALAMANDER GRAND</p>
+          <p class="piano-name">Yamaha C5</p>
+        </div>
+        <div class="piano-meta">
+          <div class="sound">
+            <p class="sound-status" id="sound-status" role="status" aria-live="polite">Звук загружается…</p>
+            <button class="btn small" id="sound-retry" type="button" hidden>Повторить</button>
+            <div class="progress" id="sound-progress" hidden><span id="sound-progress-bar"></span></div>
+          </div>
+          <div class="scroll-nav" id="scroll-nav" hidden>
+            <button class="btn icon" id="scroll-left" type="button" aria-label="Прокрутить пианино влево">&#9664;</button>
+            <button class="btn icon" id="scroll-right" type="button" aria-label="Прокрутить пианино вправо">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="keyboard-bed">
+        <div class="gold-felt" aria-hidden="true"></div>
+        <div class="piano-scroll" id="piano-scroll" role="region" aria-label="Пианино на 61 клавишу, C2–C7" tabindex="0"></div>
+      </div>
+
+      <div class="controls">
+        <div class="group" role="group" aria-labelledby="g-labels">
+          <span class="group-label" id="g-labels">Подписи</span>
+          <div class="seg">
+            <button type="button" data-labels="letters" aria-pressed="true">Буквы</button>
+            <button type="button" data-labels="notes" aria-pressed="false">Ноты</button>
+            <button type="button" data-labels="none" aria-pressed="false">Без подписей</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-layout">
+          <span class="group-label" id="g-layout">Раскладка букв</span>
+          <div class="seg">
+            <button type="button" data-layout="en" aria-pressed="true">EN</button>
+            <button type="button" data-layout="ru" aria-pressed="false">RU</button>
+            <button type="button" data-layout="de" aria-pressed="false">DE</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-tune">
+          <span class="group-label" id="g-tune">Тональность</span>
+          <div class="seg stepper">
+            <button type="button" id="tune-down" aria-label="Тональность ниже на полутон">&minus;</button>
+            <output id="tune-value" for="tune-down tune-up">0</output>
+            <button type="button" id="tune-up" aria-label="Тональность выше на полутон">+</button>
+          </div>
+        </div>
+        <div class="group group-volume">
+          <label class="group-label" for="volume">Громкость</label>
+          <div class="slider"><input type="range" id="volume" min="0" max="100" step="1" value="65"><output id="volume-value" for="volume">65</output></div>
+        </div>
+        <div class="group">
+          <span class="group-label" id="g-pedal">Педаль</span>
+          <button type="button" class="btn pedal" id="pedal" aria-pressed="false" aria-labelledby="g-pedal pedal-state"><span class="pedal-lamp" aria-hidden="true"></span><span id="pedal-state">выкл</span><kbd class="hint-keyboard">Space</kbd></button>
+        </div>
+      </div>
+
+      <div class="controls controls-sound" role="group" aria-labelledby="g-sound">
+        <p class="controls-title" id="g-sound">Звук</p>
+        <div class="group" role="group" aria-labelledby="g-hit">
+          <span class="group-label" id="g-hit">Удар</span>
+          <div class="seg">
+            <button type="button" data-hit="soft" aria-pressed="false">Мягкий</button>
+            <button type="button" data-hit="normal" aria-pressed="true">Обычный</button>
+            <button type="button" data-hit="bright" aria-pressed="false">Яркий</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-reverb">
+          <span class="group-label" id="g-reverb">Реверберация</span>
+          <div class="seg">
+            <button type="button" data-reverb="off" aria-pressed="false">Сухо</button>
+            <button type="button" data-reverb="room" aria-pressed="true">Комната</button>
+            <button type="button" data-reverb="hall" aria-pressed="false">Зал</button>
+          </div>
+        </div>
+        <div class="group group-volume">
+          <label class="group-label" for="reverb-amount">Количество</label>
+          <div class="slider"><input type="range" id="reverb-amount" min="0" max="100" step="1" value="20"><output id="reverb-amount-value" for="reverb-amount">20%</output></div>
+        </div>
+      </div>
+
+      <p class="hints">
+        <span class="hint hint-keyboard">Буквы с клавиатуры компьютера играют ноты: Shift — чёрные клавиши, пробел — педаль.</span>
+        <span class="hint">Нет звука на iPhone? Выключи беззвучный режим.</span>
+      </p>
+    </div>
+    <ul class="pills" aria-label="Коротко">
+      <li>61 клавиша · C2–C7</li>
+      <li>MIDI → буквы</li>
+      <li>Без установки</li>
+      <li>Записи настоящего рояля</li>
+    </ul>
+  </section>
+
+  <section class="panel glass" id="sheet" aria-labelledby="sheet-title" data-panel="sheet">
+    <p class="panel-index" aria-hidden="true">01</p>
+    <h2 id="sheet-title">Ноты буквами</h2>
+    <p class="panel-lead">Вставь ноты, записанные буквами, как в программе, и тренируйся: следующая клавиша подсвечивается.</p>
+    <div class="panel-body" data-panel-body><p class="soon">Раздел загружается… Ему нужен JavaScript.</p></div>
+  </section>
+
+  <section class="panel glass" id="midi" aria-labelledby="midi-title" data-panel="midi">
+    <p class="panel-index" aria-hidden="true">02</p>
+    <h2 id="midi-title">MIDI</h2>
+    <p class="panel-lead">Открой файл MIDI, послушай партии и получи буквы для 61 клавиши.</p>
+    <div class="panel-body" data-panel-body><p class="soon">Раздел загружается… Ему нужен JavaScript.</p></div>
+  </section>
+
+  <section class="panel glass" id="demos" aria-labelledby="demos-title" data-panel="demos">
+    <p class="panel-index" aria-hidden="true">03</p>
+    <h2 id="demos-title">Демо</h2>
+    <p class="panel-lead">Несколько старинных мелодий: послушать, потренироваться или показать буквами.</p>
+    <div class="panel-body" data-panel-body><p class="soon">Раздел загружается… Ему нужен JavaScript.</p></div>
+  </section>
+
+  <section class="panel glass about" id="about" aria-labelledby="about-title">
+    <p class="panel-index" aria-hidden="true">&#10022;</p>
+    <h2 id="about-title">PDF и фото нот — только в программе для Windows</h2>
+    <p class="panel-lead">Распознавание нот по PDF и фотографиям работает только в программе для Windows, и оно пока экспериментальное. В браузере его нет: здесь пианино, буквенные ноты и MIDI.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1">Скачать для Windows</a>
+      <a class="btn" href="Guide-ru.html">Руководство</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="attribution">Записи рояля: <a href="https://archive.org/details/SalamanderGrandPianoV3">Salamander Grand Piano V3</a> · Alexander Holm · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. MP3-версии: <a href="https://github.com/darosh/samples-piano-mp3">darosh/samples-piano-mp3</a>. Файлы не изменены. Это не означает одобрения автора.</p>
+  <p class="privacy">Страница работает в браузере: ноты и файлы никуда не отправляются, аналитики и cookie нет.</p>
+  <nav class="footer-links" aria-label="Ссылки">
+    <a href="https://github.com/popovantondev/VirtualPianoArranger/issues/new">Сообщить о проблеме</a>
+    <a href="Guide-ru.html">Руководство</a>
+    <a href="index-ru.html">О программе</a>
+  </nav>
+</footer>
+<footer class="ppk-footer">
+  <span>© 2026 Anton Popov · Virtual Piano Arranger 0.1.0-preview.1</span>
+  <nav aria-label="Правовая информация"><a href="https://popovantondev.github.io/popovantondev/impressum.html">Impressum</a><a href="https://popovantondev.github.io/popovantondev/datenschutz.html">Datenschutz</a><a href="https://github.com/popovantondev/VirtualPianoArranger">GitHub</a></nav>
+</footer>
+<noscript><p class="noscript">Для пианино нужен JavaScript. Включи его в настройках браузера.</p></noscript>
+</body>
+</html>

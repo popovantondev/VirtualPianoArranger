@@ -23,7 +23,7 @@
     "de": "Portable vollständig entpacken, SHA-256 prüfen, VirtualPianoArranger.exe öffnen.",
     "en": "Extract the entire portable folder, verify SHA-256, start VirtualPianoArranger.exe."
   },
-  "readmes": {"en": ["README.md"], "ru": ["docs/README.ru.md"], "de": ["docs/README.de.md"]},
+  "readmes": {"en": ["README.en.md"], "ru": ["README.ru.md"], "de": ["README.md"]},
   "guides": {"en": "Guide-en.html", "ru": "Guide-ru.html", "de": "Guide-de.html"},
   "help_url": "https://popovantondev.github.io/VirtualPianoArranger/Guide-{lang}.html",
   "feedback_url": "https://github.com/popovantondev/VirtualPianoArranger/issues/new",

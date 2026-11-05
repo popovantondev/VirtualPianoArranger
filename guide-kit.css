@@ -1,0 +1,5 @@
+/* Guide pages: the shared kit supplies header, footer and tokens (theme.css has the gold palette); assets/guide.css lays out the guide. */
+.guide-full-image{display:block;max-width:100%;text-align:center}.guide-full-image img{object-fit:contain}
+.guide-note{margin:34px 0 0;padding-top:20px;border-top:1px solid var(--ppk-line);color:var(--ppk-muted);font-size:13px}
+.guide-note a{color:var(--ppk-accent)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation:none!important;transition:none!important}}

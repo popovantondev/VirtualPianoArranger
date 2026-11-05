@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="light dark">
+<title>Virtual Piano Arranger — Klavier im Browser</title>
+<meta name="description" content="Klavier mit 61 Tasten direkt im Browser: Spielen Sie mit Maus, Finger oder den Buchstaben der Tastatur. Ohne Installation, es wird nichts gesendet.">
+<link rel="icon" href="presentation-icon.png">
+<link rel="alternate" hreflang="ru" href="play-ru.html">
+<link rel="alternate" hreflang="de" href="play-de.html">
+<link rel="alternate" hreflang="en" href="play-en.html">
+<script src="assets/kit/kit-theme.js"></script><link rel="stylesheet" href="assets/kit/kit.css?v=2026.11.05-1"><link rel="stylesheet" href="theme.css?v=2026.11.05-1"><script src="assets/kit/programs.js?v=2026.11.05-1" defer></script><script src="assets/kit/kit.js?v=2026.11.05-1" defer></script>
+<link rel="stylesheet" href="web/play.css?v=3">
+<script type="module" src="web/js/app.js?v=2"></script>
+</head>
+<body class="ppk-page play-page" data-ppk-slash="off">
+<a class="ppk-skip" href="#play">Zum Klavier</a>
+<div class="ppk-nav-wrap" id="ppk-nav-wrap">
+  <nav class="ppk-nav" aria-label="Hauptnavigation">
+    <a class="ppk-brand" href="index.html"><img src="presentation-icon.png" alt="" width="34" height="34"><span>Virtual Piano Arranger</span></a>
+    <span class="ppk-spacer"></span>
+    <a class="ppk-back" href="https://popovantondev.github.io/popovantondev/index.html">← Alle Programme</a>
+    <button class="ppk-search-btn" type="button" data-ppk-open-search aria-label="Programme durchsuchen"><span>Suchen</span><kbd>Strg K</kbd></button>
+    <div class="ppk-langs"><a href="play-ru.html" lang="ru" hreflang="ru">RU</a><a href="play-de.html" lang="de" hreflang="de" aria-current="page">DE</a><a href="play-en.html" lang="en" hreflang="en">EN</a></div>
+    <button class="ppk-icon-btn ppk-theme-btn" type="button" data-ppk-theme aria-label="Farbschema wechseln"></button>
+    <a class="ppk-icon-btn ppk-gh-btn" href="https://github.com/popovantondev/VirtualPianoArranger" aria-label="GitHub"></a>
+  </nav>
+</div>
+
+<main id="content">
+  <section class="hero" aria-labelledby="page-title">
+    <p class="tag"><span class="dot" aria-hidden="true"></span>Virtual Piano Arranger · Web-Version</p>
+    <h1 id="page-title">Klavier spielen – <em>direkt im Browser</em></h1>
+    <p class="lead">Mit Maus, Finger oder den Buchstaben der Tastatur. Ohne Installation und ohne Anmeldung.</p>
+    <nav class="page-menu" aria-label="Abschnitte der Seite">
+      <a href="#play">Spielen</a>
+      <a href="#sheet">Noten</a>
+      <a href="#midi">MIDI</a>
+      <a href="#demos">Demo</a>
+      <a href="#about">Über die App</a>
+    </nav>
+  </section>
+
+  <section class="stage" id="play" aria-labelledby="play-title" data-keyboard-label="Klavier mit 61 Tasten, C2–C7">
+    <h2 id="play-title" class="visually-hidden">Klavier</h2>
+    <canvas class="glow-canvas" id="glow-canvas" aria-hidden="true"></canvas>
+    <div class="stage-card glass">
+      <div class="piano-heading">
+        <div class="piano-title">
+          <p class="piano-eyebrow">SALAMANDER GRAND</p>
+          <p class="piano-name">Yamaha C5</p>
+        </div>
+        <div class="piano-meta">
+          <div class="sound">
+            <p class="sound-status" id="sound-status" role="status" aria-live="polite">Klang wird geladen …</p>
+            <button class="btn small" id="sound-retry" type="button" hidden>Erneut versuchen</button>
+            <div class="progress" id="sound-progress" hidden><span id="sound-progress-bar"></span></div>
+          </div>
+          <div class="scroll-nav" id="scroll-nav" hidden>
+            <button class="btn icon" id="scroll-left" type="button" aria-label="Klavier nach links scrollen">&#9664;</button>
+            <button class="btn icon" id="scroll-right" type="button" aria-label="Klavier nach rechts scrollen">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="keyboard-bed">
+        <div class="gold-felt" aria-hidden="true"></div>
+        <div class="piano-scroll" id="piano-scroll" role="region" aria-label="Klavier mit 61 Tasten, C2–C7" tabindex="0"></div>
+      </div>
+
+      <div class="controls">
+        <div class="group" role="group" aria-labelledby="g-labels">
+          <span class="group-label" id="g-labels">Beschriftung</span>
+          <div class="seg">
+            <button type="button" data-labels="letters" aria-pressed="true">Buchstaben</button>
+            <button type="button" data-labels="notes" aria-pressed="false">Noten</button>
+            <button type="button" data-labels="none" aria-pressed="false">Ohne Beschriftung</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-layout">
+          <span class="group-label" id="g-layout">Buchstabenbelegung</span>
+          <div class="seg">
+            <button type="button" data-layout="en" aria-pressed="true">EN</button>
+            <button type="button" data-layout="ru" aria-pressed="false">RU</button>
+            <button type="button" data-layout="de" aria-pressed="false">DE</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-tune">
+          <span class="group-label" id="g-tune">Tonart</span>
+          <div class="seg stepper">
+            <button type="button" id="tune-down" aria-label="Tonart einen Halbton tiefer">&minus;</button>
+            <output id="tune-value" for="tune-down tune-up">0</output>
+            <button type="button" id="tune-up" aria-label="Tonart einen Halbton höher">+</button>
+          </div>
+        </div>
+        <div class="group group-volume">
+          <label class="group-label" for="volume">Lautstärke</label>
+          <div class="slider"><input type="range" id="volume" min="0" max="100" step="1" value="65"><output id="volume-value" for="volume">65</output></div>
+        </div>
+        <div class="group">
+          <span class="group-label" id="g-pedal">Pedal</span>
+          <button type="button" class="btn pedal" id="pedal" aria-pressed="false" aria-labelledby="g-pedal pedal-state"><span class="pedal-lamp" aria-hidden="true"></span><span id="pedal-state">aus</span><kbd class="hint-keyboard">Space</kbd></button>
+        </div>
+      </div>
+
+      <div class="controls controls-sound" role="group" aria-labelledby="g-sound">
+        <p class="controls-title" id="g-sound">Klang</p>
+        <div class="group" role="group" aria-labelledby="g-hit">
+          <span class="group-label" id="g-hit">Anschlag</span>
+          <div class="seg">
+            <button type="button" data-hit="soft" aria-pressed="false">Weich</button>
+            <button type="button" data-hit="normal" aria-pressed="true">Normal</button>
+            <button type="button" data-hit="bright" aria-pressed="false">Kräftig</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-reverb">
+          <span class="group-label" id="g-reverb">Nachhall</span>
+          <div class="seg">
+            <button type="button" data-reverb="off" aria-pressed="false">Trocken</button>
+            <button type="button" data-reverb="room" aria-pressed="true">Raum</button>
+            <button type="button" data-reverb="hall" aria-pressed="false">Saal</button>
+          </div>
+        </div>
+        <div class="group group-volume">
+          <label class="group-label" for="reverb-amount">Anteil</label>
+          <div class="slider"><input type="range" id="reverb-amount" min="0" max="100" step="1" value="20"><output id="reverb-amount-value" for="reverb-amount">20%</output></div>
+        </div>
+      </div>
+
+      <p class="hints">
+        <span class="hint hint-keyboard">Die Buchstaben der Computertastatur spielen Noten: Shift – schwarze Tasten, Leertaste – Pedal.</span>
+        <span class="hint">Kein Ton auf dem iPhone? Schalten Sie den Stumm-Modus aus.</span>
+      </p>
+    </div>
+    <ul class="pills" aria-label="Kurz gesagt">
+      <li>61 Tasten · C2–C7</li>
+      <li>MIDI → Buchstaben</li>
+      <li>Ohne Installation</li>
+      <li>Aufnahmen eines echten Flügels</li>
+    </ul>
+  </section>
+
+  <section class="panel glass" id="sheet" aria-labelledby="sheet-title" data-panel="sheet">
+    <p class="panel-index" aria-hidden="true">01</p>
+    <h2 id="sheet-title">Noten als Buchstaben</h2>
+    <p class="panel-lead">Fügen Sie Noten in Buchstabenschrift ein, wie in der App, und üben Sie: Die nächste Taste leuchtet auf.</p>
+    <div class="panel-body" data-panel-body><p class="soon">Der Bereich wird geladen … Er braucht JavaScript.</p></div>
+  </section>
+
+  <section class="panel glass" id="midi" aria-labelledby="midi-title" data-panel="midi">
+    <p class="panel-index" aria-hidden="true">02</p>
+    <h2 id="midi-title">MIDI</h2>
+    <p class="panel-lead">Öffnen Sie eine MIDI-Datei, hören Sie die Stimmen an und erhalten Sie Buchstaben für 61 Tasten.</p>
+    <div class="panel-body" data-panel-body><p class="soon">Der Bereich wird geladen … Er braucht JavaScript.</p></div>
+  </section>
+
+  <section class="panel glass" id="demos" aria-labelledby="demos-title" data-panel="demos">
+    <p class="panel-index" aria-hidden="true">03</p>
+    <h2 id="demos-title">Demo</h2>
+    <p class="panel-lead">Einige alte Melodien: anhören, üben oder als Buchstaben anzeigen.</p>
+    <div class="panel-body" data-panel-body><p class="soon">Der Bereich wird geladen … Er braucht JavaScript.</p></div>
+  </section>
+
+  <section class="panel glass about" id="about" aria-labelledby="about-title">
+    <p class="panel-index" aria-hidden="true">&#10022;</p>
+    <h2 id="about-title">PDF und Notenfotos – nur in der Windows-Anwendung</h2>
+    <p class="panel-lead">Die Erkennung von Noten aus PDF und Fotos gibt es nur in der Windows-Anwendung, und sie ist noch experimentell. Im Browser fehlt sie: Hier gibt es Klavier, Buchstabennoten und MIDI.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1">Herunterladen für Windows</a>
+      <a class="btn" href="Guide-de.html">Anleitung</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="attribution">Klavieraufnahmen: <a href="https://archive.org/details/SalamanderGrandPianoV3">Salamander Grand Piano V3</a> · Alexander Holm · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. MP3-Fassungen: <a href="https://github.com/darosh/samples-piano-mp3">darosh/samples-piano-mp3</a>. Die Dateien sind unverändert. Das bedeutet keine Billigung durch den Urheber.</p>
+  <p class="privacy">Die Seite läuft im Browser: Noten und Dateien werden nirgendwohin gesendet, es gibt weder Analyse noch Cookies.</p>
+  <nav class="footer-links" aria-label="Links">
+    <a href="https://github.com/popovantondev/VirtualPianoArranger/issues/new">Problem melden</a>
+    <a href="Guide-de.html">Anleitung</a>
+    <a href="index.html">Über die Anwendung</a>
+  </nav>
+</footer>
+<footer class="ppk-footer">
+  <span>© 2026 Anton Popov · Virtual Piano Arranger 0.1.0-preview.1</span>
+  <nav aria-label="Rechtliches"><a href="https://popovantondev.github.io/popovantondev/impressum.html">Impressum</a><a href="https://popovantondev.github.io/popovantondev/datenschutz.html">Datenschutz</a><a href="https://github.com/popovantondev/VirtualPianoArranger">GitHub</a></nav>
+</footer>
+<noscript><p class="noscript">Das Klavier braucht JavaScript. Aktivieren Sie es in den Browser-Einstellungen.</p></noscript>
+</body>
+</html>

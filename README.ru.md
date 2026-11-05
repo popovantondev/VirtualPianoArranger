@@ -1,8 +1,10 @@
-[Русский](../docs/README.ru.md) · [Deutsch](../docs/README.de.md) · [English](../README.md)
+[Русский](README.ru.md) · [Deutsch](README.md) · [English](README.en.md)
 
-![Virtual Piano Arranger](../assets/readme-banner-ru.svg)
+![Virtual Piano Arranger](assets/readme-banner-ru.svg)
 
 *Иллюстрация на ноутбуке; не проверка совместимости устройства.*
+
+[![Играть в браузере](assets/play-in-browser-ru.svg)](https://popovantondev.github.io/VirtualPianoArranger/play-ru.html)
 
 **[Скачать](https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1)** · **[Руководство](https://popovantondev.github.io/VirtualPianoArranger/Guide-ru.html)** · **[Сообщить об ошибке](https://github.com/popovantondev/VirtualPianoArranger/issues/new)**
 
@@ -38,6 +40,6 @@ Windows x64 · Русский / Deutsch / English · 0.1.0-preview.1
 
 MIDI звучит пианино, а не исходными инструментами General MIDI. Для некоторых файлов требуется согласие на приблизительное проигрывание. Запись/WAV работают локально; другие форматы экспорта требуют отдельно доступного FFmpeg. Распознавание аудио/видео и импорт YouTube пока не доступны. Точность распознавания, другой ПК и длинные сеансы ещё требуют проверки. EXE без цифровой подписи.
 
-Собственный код приложения распространяется по [MIT](../LICENSE). Сторонний код, сэмплы пианино и модели сохраняют свои лицензии: MIT их не заменяет.
+Собственный код приложения распространяется по [MIT](LICENSE). Сторонний код, сэмплы пианино и модели сохраняют свои лицензии: MIT их не заменяет.
 
-Сохраняйте папку целиком, лицензии и уведомления. У выпуска есть отдельные исходники и SHA-256; прочитайте [уведомления](../DISTRIBUTION_NOTICES.md), [происхождение моделей](../MODEL_PROVENANCE.md) и [инструкцию замены библиотек](../LIBRARY_REPLACEMENT.md). Preview не означает, что проверены все партитуры или все компьютеры Windows.
+Сохраняйте папку целиком, лицензии и уведомления. У выпуска есть отдельные исходники и SHA-256; прочитайте [уведомления](DISTRIBUTION_NOTICES.md), [происхождение моделей](MODEL_PROVENANCE.md) и [инструкцию замены библиотек](LIBRARY_REPLACEMENT.md). Preview не означает, что проверены все партитуры или все компьютеры Windows.

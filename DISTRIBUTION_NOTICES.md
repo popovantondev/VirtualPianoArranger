@@ -32,6 +32,8 @@ CPython 3.14.7 hosts the interface; CPython 3.11.9 runs recognition separately. 
 
 Salamander Grand Piano V3 recordings: copyright Alexander Holm, CC BY 3.0 Unported. MP3 conversions were distributed by darosh / `@audio-samples/piano-mp3-velocity{3,8,13}` 1.0.5. The 90 MP3 files are unmodified. Playback applies interpolation/pitch shifting, envelopes, optional reverb and limiting. Keep `licenses/Salamander-ATTRIBUTION.md`, its license link, and the sample manifest. No endorsement is implied.
 
+The same unmodified recordings are also distributed to visitors by the browser piano pages (`play-ru.html`, `play-de.html`, `play-en.html`), which load velocity layer 3, 8 or 13 (chosen with the "Touch" setting) from `assets/offline_piano/samples/`. Those pages carry the author, license and distributor attribution in their footer; keep it when copying or hosting them. The web pages include no third-party JavaScript libraries.
+
 ## Source and redistribution
 
 Keep the accompanying source archives, original notices, this notice, model provenance and replacement instructions available with any redistributed package. The archive manifests give per-file hashes. A Git source snapshot alone does not contain the recognition runtimes/models or substitute for their accompanying materials. Do not assert that MIT alone covers the whole portable package.

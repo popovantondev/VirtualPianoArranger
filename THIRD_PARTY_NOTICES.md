@@ -6,6 +6,8 @@ MIT in `LICENSE` applies only to the original Virtual Piano Arranger code and ar
 
 Salamander Grand Piano V3 recordings: copyright Alexander Holm, licensed under [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/). Yamaha C5 piano samples were distributed as MP3 conversions by darosh / `@audio-samples/piano-mp3-velocity{3,8,13}` 1.0.5. The 90 included files are not modified by VPA; playback applies interpolation/pitch shifting, envelopes, reverb and limiting. Full attribution, original-library and distributor links: [ATTRIBUTION](assets/offline_piano/ATTRIBUTION.md). Per-file SHA-256 and package integrity: [sample manifest](assets/offline_piano/sample_manifest.json).
 
+The same unmodified Salamander recordings (velocity layers 3, 8 and 13, MP3 files in `assets/offline_piano/samples/`; the page loads the layer chosen with the "Touch" setting) are also served directly to visitors by the browser piano pages `play-ru.html`, `play-de.html` and `play-en.html` on GitHub Pages. The attribution above is shown in the footer of those pages. The web pages use no third-party JavaScript libraries, fonts, scripts, analytics or external hosts; the page code in `web/` and the page generator in `tools/` is original project code.
+
 ## Dependencies not included in this source snapshot
 
 - PySide6/Shiboken6 and Qt: 6.11.2. Applicable open-source terms vary by component; Qt WebEngine includes Chromium and Qt PDF includes PDFium with separate third-party notices. The downloadable runtime package must carry its own complete notices, required sources and library-replacement instructions.

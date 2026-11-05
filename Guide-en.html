@@ -5,16 +5,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Virtual Piano Arranger — User guide</title>
 <link rel="stylesheet" href="assets/guide.css">
-<link rel="stylesheet" href="guide-polish.css?v=20261022"></head>
-<body>
-<!-- guide-polish:start --><aside class="guide-tools"><nav aria-label="Navigation"><a href="https://popovantondev.github.io/popovantondev/index.html">← All applications</a><a href="index-en.html">About the application</a></nav></aside><!-- guide-polish:end -->
-<main>
-<nav aria-label="Language"><a href="Guide-en.html" aria-current="page">English</a><a href="Guide-ru.html">Русский</a><a href="Guide-de.html">Deutsch</a><a href="https://github.com/popovantondev/VirtualPianoArranger#readme">README</a></nav>
+<!-- ppk-head:start --><meta name="color-scheme" content="light dark"><link rel="icon" href="presentation-icon.png"><meta name="description" content="Offline piano, letter notation and selected MIDI part import. Score recognition is experimental."><script src="assets/kit/kit-theme.js"></script><link rel="stylesheet" href="assets/kit/kit.css?v=2026.11.05-1"><link rel="stylesheet" href="theme.css?v=2026.11.05-1"><script src="assets/kit/programs.js?v=2026.11.05-1" defer></script><script src="assets/kit/kit.js?v=2026.11.05-1" defer></script><link rel="stylesheet" href="guide-kit.css?v=2026.11.05-1"><!-- ppk-head:end --></head>
+<body class="ppk-page ppk-prose">
+<!-- ppk-nav:start --><a class="ppk-skip" href="#main-content">Skip to content</a>
+<div class="ppk-nav-wrap" id="ppk-nav-wrap">
+  <nav class="ppk-nav" aria-label="Main navigation">
+    <a class="ppk-brand" href="index-en.html"><img src="presentation-icon.png" alt="" width="34" height="34"><span>Virtual Piano Arranger</span></a>
+    <span class="ppk-spacer"></span>
+    <a class="ppk-back" href="https://popovantondev.github.io/popovantondev/index-en.html">← All programs</a>
+    <button class="ppk-search-btn" type="button" data-ppk-open-search aria-label="Search programs"><span>Search</span><kbd>Ctrl K</kbd></button>
+    <div class="ppk-langs"><a href="Guide-ru.html" lang="ru" hreflang="ru">RU</a><a href="Guide-de.html" lang="de" hreflang="de">DE</a><a href="Guide-en.html" lang="en" hreflang="en" aria-current="page">EN</a></div>
+    <button class="ppk-icon-btn ppk-theme-btn" type="button" data-ppk-theme aria-label="Switch colour scheme"></button>
+    <a class="ppk-icon-btn ppk-gh-btn" href="https://github.com/popovantondev/VirtualPianoArranger" aria-label="GitHub"></a>
+  </nav>
+</div><!-- ppk-nav:end -->
+<main id="main-content">
 <header class="hero">
 <div><div class="eyebrow">Virtual Piano Arranger · Windows x64 · Preview 0.1.0-preview.1</div>
 <h1>Virtual Piano Arranger — User guide</h1>
 <p class="subtitle">Turn notes into letters. Play on a local piano.</p>
-<a class="button" href="#step-1">Get started</a></div>
+<a class="button" href="#step-1">Get started</a><a class="button" href="play-en.html">Play in the browser</a></div>
 <figure><a class="guide-full-image" href="assets/surface-laptop-en-v1.png" aria-label="Open the full image"><img src="assets/surface-laptop-en-v1.png" alt="Virtual Piano Arranger in English"></a><figcaption>Illustrative laptop mockup — not a device compatibility test.</figcaption></figure>
 </header>
 <div class="contents"><a href="#step-1">Open a file</a><a href="#step-2">Adapt the notation</a><a href="#step-3">Rests and playing</a><a href="#step-4">Save and record</a><a href="#step-5">Limits</a></div>
@@ -25,6 +35,11 @@
 <section class="card" id="step-4"><span class="number">04</span><h2 id="section-4">Save and record</h2><p>Save a VPA project to preserve the imported score and settings. Export TXT saves the visible letters, not exact rhythm. Record captures this application's piano sound, not a microphone. Export WAV directly; other audio formats need separately available FFmpeg.</p></section>
 <section class="card" id="step-5"><span class="number">05</span><h2 id="section-5">Limits</h2><p>This is a preview. MIDI uses piano sound, not original GM instruments. Verify recognition against the source. Untimed TXT has no automatic playback or guessed pauses. Audio/video recognition and YouTube import are unavailable. Do not share private projects or logs in bug reports.</p></section>
 </div>
-<footer>Offline guide · Windows x64 · Preview</footer>
-</main></body>
+<div class="guide-note">Offline guide · Windows x64 · Preview</div>
+</main>
+<footer class="ppk-footer">
+  <span>© 2026 Anton Popov · Virtual Piano Arranger 0.1.0-preview.1</span>
+  <nav aria-label="Legal"><a href="https://popovantondev.github.io/popovantondev/impressum.html">Impressum</a><a href="https://popovantondev.github.io/popovantondev/datenschutz.html">Datenschutz</a><a href="https://github.com/popovantondev/VirtualPianoArranger">GitHub</a></nav>
+</footer>
+</body>
 </html>

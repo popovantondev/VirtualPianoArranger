@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="72" viewBox="0 0 360 72" role="img" aria-label="Im Browser spielen">
+ <title>Im Browser spielen</title>
+ <defs><linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5c38d"/><stop offset="1" stop-color="#c69c61"/></linearGradient></defs>
+ <rect x="1.5" y="1.5" width="357" height="69" rx="34.5" fill="url(#gold)" stroke="#a97f45" stroke-width="3"/>
+ <path d="M42 22L42 50L64 36Z" fill="#17140e"/>
+ <text x="214" y="45" text-anchor="middle" fill="#17140e" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">Im Browser spielen</text>
+</svg>

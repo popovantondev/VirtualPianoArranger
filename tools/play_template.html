@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111317" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="light dark">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="icon" href="presentation-icon.png">
+<link rel="alternate" hreflang="ru" href="play-ru.html">
+<link rel="alternate" hreflang="de" href="play-de.html">
+<link rel="alternate" hreflang="en" href="play-en.html">
+{{kit_head_html}}
+<link rel="stylesheet" href="web/play.css?v=3">
+<script type="module" src="web/js/app.js?v=2"></script>
+</head>
+<body class="ppk-page play-page" data-ppk-slash="off">
+<a class="ppk-skip" href="#play">{{skip}}</a>
+{{kit_nav_html}}
+
+<main id="content">
+  <section class="hero" aria-labelledby="page-title">
+    <p class="tag"><span class="dot" aria-hidden="true"></span>{{tag}}</p>
+    <h1 id="page-title">{{h1_html}}</h1>
+    <p class="lead">{{lead}}</p>
+    <nav class="page-menu" aria-label="{{menu_label}}">
+      <a href="#play">{{m_play}}</a>
+      <a href="#sheet">{{m_sheet}}</a>
+      <a href="#midi">{{m_midi}}</a>
+      <a href="#demos">{{m_demos}}</a>
+      <a href="#about">{{m_about}}</a>
+    </nav>
+  </section>
+
+  <section class="stage" id="play" aria-labelledby="play-title" data-keyboard-label="{{piano_label}}">
+    <h2 id="play-title" class="visually-hidden">{{play_title}}</h2>
+    <canvas class="glow-canvas" id="glow-canvas" aria-hidden="true"></canvas>
+    <div class="stage-card glass">
+      <div class="piano-heading">
+        <div class="piano-title">
+          <p class="piano-eyebrow">SALAMANDER GRAND</p>
+          <p class="piano-name">Yamaha C5</p>
+        </div>
+        <div class="piano-meta">
+          <div class="sound">
+            <p class="sound-status" id="sound-status" role="status" aria-live="polite">{{sound_initial}}</p>
+            <button class="btn small" id="sound-retry" type="button" hidden>{{retry}}</button>
+            <div class="progress" id="sound-progress" hidden><span id="sound-progress-bar"></span></div>
+          </div>
+          <div class="scroll-nav" id="scroll-nav" hidden>
+            <button class="btn icon" id="scroll-left" type="button" aria-label="{{scroll_left}}">&#9664;</button>
+            <button class="btn icon" id="scroll-right" type="button" aria-label="{{scroll_right}}">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="keyboard-bed">
+        <div class="gold-felt" aria-hidden="true"></div>
+        <div class="piano-scroll" id="piano-scroll" role="region" aria-label="{{piano_label}}" tabindex="0"></div>
+      </div>
+
+      <div class="controls">
+        <div class="group" role="group" aria-labelledby="g-labels">
+          <span class="group-label" id="g-labels">{{g_labels}}</span>
+          <div class="seg">
+            <button type="button" data-labels="letters" aria-pressed="true">{{opt_letters}}</button>
+            <button type="button" data-labels="notes" aria-pressed="false">{{opt_notes}}</button>
+            <button type="button" data-labels="none" aria-pressed="false">{{opt_none}}</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-layout">
+          <span class="group-label" id="g-layout">{{g_layout}}</span>
+          <div class="seg">
+            <button type="button" data-layout="en" aria-pressed="true">EN</button>
+            <button type="button" data-layout="ru" aria-pressed="false">RU</button>
+            <button type="button" data-layout="de" aria-pressed="false">DE</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-tune">
+          <span class="group-label" id="g-tune">{{g_tune}}</span>
+          <div class="seg stepper">
+            <button type="button" id="tune-down" aria-label="{{tune_down}}">&minus;</button>
+            <output id="tune-value" for="tune-down tune-up">0</output>
+            <button type="button" id="tune-up" aria-label="{{tune_up}}">+</button>
+          </div>
+        </div>
+        <div class="group group-volume">
+          <label class="group-label" for="volume">{{g_volume}}</label>
+          <div class="slider"><input type="range" id="volume" min="0" max="100" step="1" value="65"><output id="volume-value" for="volume">65</output></div>
+        </div>
+        <div class="group">
+          <span class="group-label" id="g-pedal">{{g_pedal}}</span>
+          <button type="button" class="btn pedal" id="pedal" aria-pressed="false" aria-labelledby="g-pedal pedal-state"><span class="pedal-lamp" aria-hidden="true"></span><span id="pedal-state">{{pedal_off}}</span><kbd class="hint-keyboard">Space</kbd></button>
+        </div>
+      </div>
+
+      <div class="controls controls-sound" role="group" aria-labelledby="g-sound">
+        <p class="controls-title" id="g-sound">{{g_sound}}</p>
+        <div class="group" role="group" aria-labelledby="g-hit">
+          <span class="group-label" id="g-hit">{{g_hit}}</span>
+          <div class="seg">
+            <button type="button" data-hit="soft" aria-pressed="false">{{hit_soft}}</button>
+            <button type="button" data-hit="normal" aria-pressed="true">{{hit_normal}}</button>
+            <button type="button" data-hit="bright" aria-pressed="false">{{hit_bright}}</button>
+          </div>
+        </div>
+        <div class="group" role="group" aria-labelledby="g-reverb">
+          <span class="group-label" id="g-reverb">{{g_reverb}}</span>
+          <div class="seg">
+            <button type="button" data-reverb="off" aria-pressed="false">{{rv_off}}</button>
+            <button type="button" data-reverb="room" aria-pressed="true">{{rv_room}}</button>
+            <button type="button" data-reverb="hall" aria-pressed="false">{{rv_hall}}</button>
+          </div>
+        </div>
+        <div class="group group-volume">
+          <label class="group-label" for="reverb-amount">{{g_amount}}</label>
+          <div class="slider"><input type="range" id="reverb-amount" min="0" max="100" step="1" value="20"><output id="reverb-amount-value" for="reverb-amount">20%</output></div>
+        </div>
+      </div>
+
+      <p class="hints">
+        <span class="hint hint-keyboard">{{hint_keyboard}}</span>
+        <span class="hint">{{hint_iphone}}</span>
+      </p>
+    </div>
+    <ul class="pills" aria-label="{{pills_label}}">
+      <li>{{pill1}}</li>
+      <li>{{pill_midi}}</li>
+      <li>{{pill2}}</li>
+      <li>{{pill3}}</li>
+    </ul>
+  </section>
+
+  <section class="panel glass" id="sheet" aria-labelledby="sheet-title" data-panel="sheet">
+    <p class="panel-index" aria-hidden="true">01</p>
+    <h2 id="sheet-title">{{sheet_title}}</h2>
+    <p class="panel-lead">{{sheet_lead}}</p>
+    <div class="panel-body" data-panel-body><p class="soon">{{sheet_soon}}</p></div>
+  </section>
+
+  <section class="panel glass" id="midi" aria-labelledby="midi-title" data-panel="midi">
+    <p class="panel-index" aria-hidden="true">02</p>
+    <h2 id="midi-title">{{midi_title}}</h2>
+    <p class="panel-lead">{{midi_lead}}</p>
+    <div class="panel-body" data-panel-body><p class="soon">{{midi_soon}}</p></div>
+  </section>
+
+  <section class="panel glass" id="demos" aria-labelledby="demos-title" data-panel="demos">
+    <p class="panel-index" aria-hidden="true">03</p>
+    <h2 id="demos-title">{{demos_title}}</h2>
+    <p class="panel-lead">{{demos_lead}}</p>
+    <div class="panel-body" data-panel-body><p class="soon">{{demos_soon}}</p></div>
+  </section>
+
+  <section class="panel glass about" id="about" aria-labelledby="about-title">
+    <p class="panel-index" aria-hidden="true">&#10022;</p>
+    <h2 id="about-title">{{about_title}}</h2>
+    <p class="panel-lead">{{about_text}}</p>
+    <div class="actions">
+      <a class="btn primary" href="{{release_url}}">{{btn_download}}</a>
+      <a class="btn" href="Guide-{{lang}}.html">{{btn_guide}}</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="attribution">{{attribution_html}}</p>
+  <p class="privacy">{{privacy}}</p>
+  <nav class="footer-links" aria-label="{{footer_label}}">
+    <a href="{{feedback_url}}">{{foot_issue}}</a>
+    <a href="Guide-{{lang}}.html">{{btn_guide}}</a>
+    <a href="{{home_href}}">{{foot_home}}</a>
+  </nav>
+</footer>
+{{kit_footer_html}}
+<noscript><p class="noscript">{{noscript}}</p></noscript>
+</body>
+</html>

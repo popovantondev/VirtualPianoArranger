@@ -6,11 +6,46 @@
     "en": "assets/surface-laptop-en-v1.png"
   },
   "icon": "presentation-icon.png",
+  "stack": "Python · PySide6",
   "palette": {
+    "bg": "#f7f3ea",
+    "panel": "#ffffff",
+    "ink": "#231c10",
+    "muted": "#5f5646",
+    "line": "#ded3be",
     "accent": "#815c20",
+    "accent-ink": "#ffffff",
     "tint": "#f8efdc",
     "hero": "#30291f",
-    "hero-end": "#6c5835"
+    "hero-end": "#6c5835",
+    "glass": "rgba(255,252,245,.78)",
+    "term": "#17130d",
+    "term-ink": "#eadfca",
+    "term-ps": "#e5c38d",
+    "term-ok": "#8fd694",
+    "term-dim": "#a89f8e",
+    "focus": "#a8520a",
+    "shadow": "0 22px 50px -30px rgba(60,44,16,.35)"
+  },
+  "palette_dark": {
+    "bg": "#111317",
+    "panel": "#1b1e24",
+    "ink": "#f1ece3",
+    "muted": "#b5b2ac",
+    "line": "#3d3629",
+    "accent": "#dfb87c",
+    "accent-ink": "#17140e",
+    "tint": "#2a2419",
+    "hero": "#30291f",
+    "hero-end": "#6c5835",
+    "glass": "rgba(27,30,36,.78)",
+    "term": "#0b0c0e",
+    "term-ink": "#eadfca",
+    "term-ps": "#e5c38d",
+    "term-ok": "#8fd694",
+    "term-dim": "#a89f8e",
+    "focus": "#f0a85a",
+    "shadow": "0 22px 50px -30px rgba(0,0,0,.7)"
   },
   "flow": {
     "ru": [
@@ -29,5 +64,103 @@
       "Arrange MIDI parts"
     ]
   },
-  "caption": "illustration"
+  "caption": "illustration",
+  "bento": {
+    "de": {
+      "inst_text": "Die Schritte aus „Erste Schritte“ im README und in der Release-Beschreibung.",
+      "term": [
+        ["ps", "1. Portable-ZIP aus GitHub Releases laden, SHA-256 mit SHA256SUMS.txt vergleichen"],
+        ["ps", "2. Den gesamten Portable-Ordner entpacken"],
+        ["dim", "   Die EXE nicht von ihren Begleitdateien trennen; Python und Administratorrechte sind nicht nötig"],
+        ["ps", "3. VirtualPianoArranger.exe starten (die EXE ist nicht digital signiert)"],
+        ["ok", "4. MIDI-Datei öffnen, Stimmen anhören und importieren"]
+      ],
+      "tile": {
+        "title": "Ihre Daten",
+        "live": "Läuft lokal",
+        "text": "Das Windows-Programm arbeitet offline auf Ihrem PC. Die Klavierseite im Browser sendet Noten und Dateien nirgendwohin; es gibt weder Analyse noch Cookies."
+      },
+      "features": [
+        "Offline-Klavier",
+        "Buchstabennotation",
+        "MIDI-Stimmen auswählen",
+        "Tonart und Vereinfachung",
+        "Pausen anzeigen",
+        "WAV-Aufnahme",
+        "MusicXML · VPA · TXT",
+        "Klavier im Browser"
+      ],
+      "checks": [
+        "Tests im Repository: Python-Tests (test_*.py) und Tests der Browser-Version (web/tests, Node.js)",
+        "SHA-256-Prüfsumme (SHA256SUMS.txt) und zugehörige Quellen im Release",
+        "Lizenz- und Herkunftshinweise (THIRD_PARTY_NOTICES, MODEL_PROVENANCE)",
+        "Anleitung auf Deutsch, Englisch und Russisch",
+        "Vorabversion {v}: Erkennungsgenauigkeit, weitere PCs und lange Sitzungen sind noch nicht umfassend geprüft"
+      ]
+    },
+    "en": {
+      "inst_text": "The steps from “First steps” in the README and the release description.",
+      "term": [
+        ["ps", "1. Download the portable ZIP from GitHub Releases, compare SHA-256 with SHA256SUMS.txt"],
+        ["ps", "2. Extract the entire portable folder"],
+        ["dim", "   Keep the EXE beside its companion files; no Python or administrator access needed"],
+        ["ps", "3. Start VirtualPianoArranger.exe (the EXE is not digitally signed)"],
+        ["ok", "4. Open a MIDI file, audition the parts and import them"]
+      ],
+      "tile": {
+        "title": "Your data",
+        "live": "Runs locally",
+        "text": "The Windows program works offline on your PC. The piano page in the browser sends notes and files nowhere; there is no analytics and no cookies."
+      },
+      "features": [
+        "Offline piano",
+        "Letter notation",
+        "MIDI part selection",
+        "Key and simplification",
+        "Show rests",
+        "WAV recording",
+        "MusicXML · VPA · TXT",
+        "Piano in the browser"
+      ],
+      "checks": [
+        "Tests in the repository: Python tests (test_*.py) and tests of the browser version (web/tests, Node.js)",
+        "SHA-256 checksum (SHA256SUMS.txt) and corresponding sources in the release",
+        "Licence and provenance notices (THIRD_PARTY_NOTICES, MODEL_PROVENANCE)",
+        "Guide in German, English and Russian",
+        "Preview {v}: recognition accuracy, other PCs and long sessions are not yet thoroughly checked"
+      ]
+    },
+    "ru": {
+      "inst_text": "Шаги из раздела «Начало работы» README и описания выпуска.",
+      "term": [
+        ["ps", "1. Скачать portable ZIP из GitHub Releases, сверить SHA-256 с SHA256SUMS.txt"],
+        ["ps", "2. Распаковать всю папку portable"],
+        ["dim", "   EXE нельзя переносить отдельно от остальных файлов; Python и права администратора не нужны"],
+        ["ps", "3. Запустить VirtualPianoArranger.exe (EXE без цифровой подписи)"],
+        ["ok", "4. Открыть MIDI, прослушать партии и импортировать нужные"]
+      ],
+      "tile": {
+        "title": "Ваши данные",
+        "live": "Работает локально",
+        "text": "Программа для Windows работает офлайн на вашем ПК. Страница с пианино в браузере никуда не отправляет ноты и файлы; аналитики и cookie нет."
+      },
+      "features": [
+        "Офлайн-пианино",
+        "Буквенная запись",
+        "Выбор партий MIDI",
+        "Тональность и упрощение",
+        "Показ пауз",
+        "Запись в WAV",
+        "MusicXML · VPA · TXT",
+        "Пианино в браузере"
+      ],
+      "checks": [
+        "Тесты в репозитории: Python-тесты (test_*.py) и тесты браузерной версии (web/tests, Node.js)",
+        "Контрольная сумма SHA-256 (SHA256SUMS.txt) и соответствующие исходники в выпуске",
+        "Уведомления о лицензиях и происхождении (THIRD_PARTY_NOTICES, MODEL_PROVENANCE)",
+        "Руководство на немецком, английском и русском",
+        "Предварительная версия {v}: точность распознавания, другие ПК и длинные сеансы ещё не проверены полностью"
+      ]
+    }
+  }
 }

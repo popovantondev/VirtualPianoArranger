@@ -5,3 +5,17 @@ build/
 dist/
 *.pyc
 runtimes/
+.autopilot/serve.*
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+
+# Internal tooling files stay out of the public repository
+.autopilot/
+AGENTS.md
+CLAUDE.md
+CONTEXT.md
+docs/adr/
+docs/architecture.md
