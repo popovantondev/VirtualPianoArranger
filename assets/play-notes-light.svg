@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" aria-hidden="true">
+  <!-- Background tile for the game page: music notes drawn as plain shapes; very low opacity -->
+  <g opacity="0.07" fill="#815c20" stroke="#815c20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- eighth note -->
+    <g transform="translate(40 60) rotate(-12)"><ellipse cx="0" cy="26" rx="11" ry="8" stroke="none"/><path d="M10 26V-20" fill="none"/><path d="M10 -20c2 14 22 16 20 34" fill="none"/></g>
+    <!-- beamed pair -->
+    <g transform="translate(180 40) rotate(8)"><ellipse cx="0" cy="30" rx="10" ry="7" stroke="none"/><ellipse cx="34" cy="22" rx="10" ry="7" stroke="none"/><path d="M9 30V-12M43 22V-20M9 -12L43 -20" fill="none" stroke-width="4"/></g>
+    <!-- quarter note -->
+    <g transform="translate(270 170) rotate(-6)"><ellipse cx="0" cy="26" rx="11" ry="8" stroke="none"/><path d="M10 26V-22" fill="none"/></g>
+    <!-- treble-like swirl -->
+    <g transform="translate(90 190)" fill="none"><path d="M10 -8c-14-2-20 12-10 22s26 4 24-12-18-26-14-44 18-18 18-4-14 38-8 64"/><circle cx="2" cy="76" r="5" stroke="none" fill="#815c20"/></g>
+    <!-- eighth note -->
+    <g transform="translate(200 230) rotate(10)"><ellipse cx="0" cy="26" rx="11" ry="8" stroke="none"/><path d="M10 26V-20" fill="none"/><path d="M10 -20c2 14 22 16 20 34" fill="none"/></g>
+    <!-- sharp sign -->
+    <g transform="translate(20 270)" fill="none" stroke-width="2.5"><path d="M6 -14V16M16 -18V12M0 -4L22 -9M0 7L22 2"/></g>
+    <!-- half rest -->
+    <g transform="translate(278 60)" stroke="none"><rect x="-12" y="0" width="24" height="7"/><rect x="-7" y="-7" width="14" height="7"/></g>
+  </g>
+</svg>

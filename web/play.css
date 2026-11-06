@@ -41,6 +41,7 @@
   --halo: radial-gradient(closest-side, rgba(var(--gold-rgb), 0.30), rgba(var(--gold-rgb), 0.09) 58%, transparent 78%);
   --white-key-min: 28px;
   --font: var(--ppk-font);
+  --notes: url("../assets/play-notes-dark.svg");
 }
 
 /* Light theme: only the surroundings change. */
@@ -70,6 +71,7 @@
   --glow-top: rgba(129, 92, 32, 0.16);
   --glow-side: #f1e5c9;
   --halo: radial-gradient(closest-side, rgba(176, 128, 48, 0.22), rgba(176, 128, 48, 0.07) 58%, transparent 78%);
+  --notes: url("../assets/play-notes-light.svg");
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
@@ -98,6 +100,7 @@
     --glow-top: rgba(129, 92, 32, 0.16);
     --glow-side: #f1e5c9;
     --halo: radial-gradient(closest-side, rgba(176, 128, 48, 0.22), rgba(176, 128, 48, 0.07) 58%, transparent 78%);
+    --notes: url("../assets/play-notes-light.svg");
   }
 }
 
@@ -114,7 +117,9 @@ body.play-page {
   min-height: 100vh;
   padding-bottom: env(safe-area-inset-bottom, 0px);
   overflow-x: clip;
+  /* First layer: a quiet tile of music notes (opacity 0.07 inside the SVG), static, under every panel. */
   background:
+    var(--notes) 0 0 / 320px 320px repeat,
     radial-gradient(ellipse 70% 38% at 50% -6%, var(--glow-top), transparent 70%),
     radial-gradient(ellipse at 78% 0, var(--glow-side) 0, transparent 45%),
     var(--bg);
@@ -138,15 +143,54 @@ button, input, output { font: inherit; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* ---------- Section links under the headline (the sticky header is the shared kit header) ---------- */
+/* ---------- Language pedals in the shared header (page 95c539a: the brass pedals of the app) ----------
+   The current language is pressed down. The label is as wide as the pedal and centred in it; the outer pedals
+   are drawn off-centre, so their labels move 3 px towards the bowl. The label sits on the round bowl of the brass pedal:
+   its centre was computed from the drawings (inscribed circle of language-pedal*.svg: neutral (20, 38), left (16.8, 36.9),
+   right (23.1, 36.7) in the 40 x 50 viewBox) and checked on screenshots, within 1 px on both axes. */
+.languages { display: flex; flex: none; align-items: flex-end; gap: 0; padding: 0 4px; }
+.pedal-link {
+  --pedal-down: 0px;
+  position: relative; display: block; flex: none; width: 36px; height: 44px; margin: 0 -1px;
+  border-radius: 6px; color: #3b2a11; text-decoration: none;
+}
+.pedal-link::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: url("../assets/icons/language-pedal.svg") center bottom / contain no-repeat;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.6));
+  transform: translateY(var(--pedal-down));
+  transition: transform 130ms ease, filter 130ms ease;
+}
+.pedal-link[lang="ru"]::before { background-image: url("../assets/icons/language-pedal-left.svg"); }
+.pedal-link[lang="de"]::before { background-image: url("../assets/icons/language-pedal-right.svg"); }
+.pedal-label {
+  position: absolute; left: 0; right: 0; top: 27px; z-index: 1; pointer-events: none; text-align: center;
+  font-size: 10px; font-weight: 700; line-height: 11px; letter-spacing: 0.02em; text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(var(--pedal-down)); transition: transform 130ms ease;
+}
+.pedal-link[lang="ru"] .pedal-label { transform: translate(-3px, var(--pedal-down)); }
+.pedal-link[lang="en"] .pedal-label { top: 28px; }
+.pedal-link[lang="de"] .pedal-label { transform: translate(3px, var(--pedal-down)); }
+.pedal-link:hover { --pedal-down: 1px; color: #241a0c; }
+.pedal-link:hover::before { filter: brightness(1.1) drop-shadow(0 3px 2px rgba(0, 0, 0, 0.6)); }
+.pedal-link[aria-current="page"] { --pedal-down: 3px; color: #21170b; }
+.pedal-link[aria-current="page"]::before { filter: brightness(0.85) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.55)); }
+.pedal-link:active { --pedal-down: 4px; }
+.pedal-link:focus-visible { outline: 2px solid #ffe0a8; outline-offset: 2px; }
+.ppk-nav-wrap .languages { margin-block: -6px -4px; }
+
+/* ---------- Section links under the headline: gold pills (the old header menu), the sticky header is the shared kit header ---------- */
 .page-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 26px auto 0; }
 .page-menu a {
   display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 16px;
-  border: 1px solid rgba(var(--gold-rgb), 0.28); border-radius: 999px; background: rgba(var(--gold-rgb), 0.07);
+  border: 1px solid rgba(var(--gold-rgb), 0.3); border-radius: 999px; background: rgba(var(--gold-rgb), 0.08);
   color: var(--ink); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap;
-  transition: background 0.2s;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06); transition: background 0.2s, border-color 0.2s;
 }
-.page-menu a:hover { background: rgba(var(--gold-rgb), 0.18); color: var(--ink); }
+.page-menu a:hover { background: rgba(var(--gold-rgb), 0.2); border-color: rgba(var(--gold-rgb), 0.55); color: var(--ink); }
+
+/* The kit header animates max-width and padding when it turns into the floating pill; with the blur behind it that stutters on this page. Here only colour and shadow fade. */
+.play-page .ppk-nav-wrap, .play-page .ppk-nav { transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s; }
 
 /* ---------- Hero ---------- */
 main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) 40px; }
@@ -284,12 +328,15 @@ h1 em {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 9px; pointer-events: none;
   border-top: 1px solid #414144; border-radius: 0 0 4px 4px; background: linear-gradient(#1f2022, #060708);
 }
-.piano-key.white.is-active { background: linear-gradient(90deg, #b98c4e, #f5d29b 12%, #f6dca6 50%, #deb571 88%, #b98c4e); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16), 0 0 18px rgba(223, 184, 124, 0.45); }
+.piano-key.white.is-active { background: linear-gradient(90deg, #b98c4e, #f0c98a 12%, #f2d08e 50%, #deb571 88%, #b98c4e); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16), 0 0 18px rgba(223, 184, 124, 0.45); }
 /* Pressed black key: the whole key turns gold, like `.black.active` in the app (docs/design/dark.css). */
 .piano-key.black.is-active, .piano-key.black.is-play { color: #ffe8be; background: linear-gradient(90deg, #513419, #bd8a46, #52381e); }
 .piano-key.black.is-active::before, .piano-key.black.is-play::before { background: linear-gradient(165deg, #ffd798, #a5773a 20%, #c99d5c 50%, #6b4723 90%); border-top-color: rgba(255, 228, 170, 0.6); }
 .piano-key.black.is-active::after, .piano-key.black.is-play::after { border-top-color: #a57a40; background: linear-gradient(#8c602e, #48321b); }
 .piano-key.white.is-play { background: linear-gradient(#ffe9b5, #f3c673 82%, #dca649); }
+/* A pressed white key is gold all the way down to the label strip: the cream sheen and the cream foot of the key are re-tinted (the black keys do the same above). */
+.piano-key.white.is-active::before, .piano-key.white.is-play::before { background: linear-gradient(170deg, rgba(255, 243, 205, 0.38) 0, transparent 38%, rgba(255, 236, 176, 0.26) 56%, transparent 80%); }
+.piano-key.white.is-active::after, .piano-key.white.is-play::after { background: linear-gradient(rgba(255, 226, 160, 0.5), #d9a95b 55%, rgba(150, 104, 40, 0.75)); box-shadow: inset 0 -1px rgba(120, 78, 22, 0.55); }
 .piano-key.is-next { animation: nudge 1.3s ease-in-out infinite; }
 .piano-key.white.is-next { box-shadow: inset 0 0 0 3px var(--focus), inset 0 -7px 0 rgba(0, 0, 0, 0.07); }
 .piano-key.black.is-next { box-shadow: inset 0 0 0 3px var(--focus), 0 8px 12px -3px rgba(0, 0, 0, 0.75); }
@@ -497,6 +544,10 @@ kbd {
 
 @media (max-width: 520px) {
   body { font-size: 16px; }
+  .ppk-nav-wrap .languages { order: 7; }
+  .pedal-link { width: 32px; height: 40px; }
+  .pedal-label { top: 24px; }
+  .pedal-link[lang="en"] .pedal-label { top: 25px; }
   .controls { gap: 14px 16px; }
   .group-volume { flex-basis: 100%; }
   .piano-heading { align-items: flex-start; }

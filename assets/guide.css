@@ -4,23 +4,47 @@
 html{scroll-behavior:smooth;scroll-padding-top:92px}
 body.ppk-page{font:17px/1.75 var(--ppk-font)}
 main{max-width:1180px;margin:auto;padding:28px 32px 20px}
-.hero{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:32px;padding:40px 0 40px}
+.hero{}
 .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ppk-accent);font-weight:600}
 h1{font-size:clamp(30px,4vw,49px);line-height:1.16;letter-spacing:-.035em;margin:16px 0 22px;font-weight:650}
 .subtitle{color:var(--ppk-muted);max-width:42ch}
-.hero figure{margin:0}
-.hero img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
 figcaption{font-size:12px;color:var(--ppk-muted);margin-top:12px}
 .button{display:inline-block;margin:0 8px 8px 0;padding:10px 22px;border:1px solid #c69c61;border-radius:8px;background:linear-gradient(#e5c38d,#c69c61);color:#17140e;text-decoration:none;font-weight:600}
 .button:hover{color:#17140e;filter:brightness(1.05)}
 .contents{display:flex;gap:10px 24px;flex-wrap:wrap;margin:0 0 28px;padding:18px 0;border-block:1px solid var(--ppk-line);font-size:14px}
-.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-section.card{background:var(--ppk-panel);border:1px solid var(--ppk-line);border-radius:14px;padding:28px;scroll-margin-top:92px}
-.card .number{color:var(--ppk-accent);font-size:12px;letter-spacing:.15em;font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.steps>.card{grid-column:span 2}.steps>.card:nth-child(n+4){grid-column:span 3}
+section.card{position:relative;background:var(--ppk-panel);border:1px solid var(--ppk-line);border-top:3px solid var(--ppk-accent);border-radius:14px;padding:26px 28px 28px;scroll-margin-top:96px}
+section.card:target{box-shadow:0 0 0 3px rgba(var(--g),.35)}
+.card .number{display:block;color:var(--ppk-accent);font:700 clamp(40px,4.4vw,56px)/1 Georgia,"Times New Roman",serif;letter-spacing:-.02em}
 h2{font-size:23px;line-height:1.3;margin:12px 0 16px;font-weight:600}
 p{overflow-wrap:anywhere}
 .card p{margin:0;color:var(--ppk-ink)}
-.card:last-child{grid-column:1/-1;border-color:var(--ppk-accent)}
-@media(max-width:800px){main{padding:24px}.hero{grid-template-columns:1fr;padding-top:36px;gap:24px}.hero figure{max-width:620px}.steps{grid-template-columns:1fr}}
-@media(max-width:520px){main{padding:18px 16px 20px}.hero{padding:28px 0}.card{padding:22px!important}.contents{gap:10px 18px}h1{font-size:34px}}
+.card:last-child{border-color:var(--ppk-accent)}
+@media(max-width:800px){main{padding:24px}.steps{grid-template-columns:1fr}.steps>.card,.steps>.card:nth-child(n+4){grid-column:auto}}
+@media(max-width:520px){main{padding:18px 16px 20px}section.card{scroll-margin-top:132px}.card{padding:20px 22px 22px!important}.contents{gap:10px 18px}h1{font-size:34px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Studio scene (graphite and gold, soft light, glass table with a reflection) behind the hero of the guide. */
+:root{--g:129,92,32;--scene-ink:#231c10;--scene-muted:#4f4838;--scene-line:rgba(129,92,32,.38);
+--scene-bg:radial-gradient(ellipse 62% 52% at 50% -4%,rgba(214,170,98,.55),transparent 70%),radial-gradient(ellipse 36% 60% at 6% 34%,rgba(214,170,98,.30),transparent 72%),linear-gradient(104deg,transparent 28%,rgba(255,255,255,.35) 36%,transparent 46%),linear-gradient(#f4ecda,#e3d3ae);
+--scene-shadow:0 30px 60px -28px rgba(70,48,14,.55),0 0 70px -18px rgba(190,140,60,.5)}
+:root[data-theme="dark"]{--g:223,184,124;--scene-ink:#f1ece3;--scene-muted:#cfc9bd;--scene-line:rgba(223,184,124,.28);
+--scene-bg:radial-gradient(ellipse 62% 52% at 50% -4%,rgba(229,195,141,.26),transparent 70%),radial-gradient(ellipse 36% 60% at 6% 34%,rgba(229,195,141,.12),transparent 72%),linear-gradient(104deg,transparent 28%,rgba(229,195,141,.07) 36%,transparent 46%),linear-gradient(#1a1c20,#0d0e10);
+--scene-shadow:0 34px 70px -22px rgba(0,0,0,.85),0 0 90px -16px rgba(229,195,141,.28)}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){--g:223,184,124;--scene-ink:#f1ece3;--scene-muted:#cfc9bd;--scene-line:rgba(223,184,124,.28);
+--scene-bg:radial-gradient(ellipse 62% 52% at 50% -4%,rgba(229,195,141,.26),transparent 70%),radial-gradient(ellipse 36% 60% at 6% 34%,rgba(229,195,141,.12),transparent 72%),linear-gradient(104deg,transparent 28%,rgba(229,195,141,.07) 36%,transparent 46%),linear-gradient(#1a1c20,#0d0e10);
+--scene-shadow:0 34px 70px -22px rgba(0,0,0,.85),0 0 90px -16px rgba(229,195,141,.28)}}
+body.ppk-page{background:radial-gradient(ellipse 90% 520px at 50% 0,rgba(var(--g),.10),transparent 75%),var(--ppk-bg)}
+.hero{position:relative;overflow:hidden;margin:6px 0 34px;padding:clamp(28px,4.6vw,58px) clamp(16px,4vw,48px) clamp(18px,2.6vw,28px);border:1px solid var(--scene-line);border-radius:26px;background:var(--scene-bg);color:var(--scene-ink);text-align:center}
+.hero .eyebrow{color:var(--scene-ink);opacity:.85}
+.hero h1{max-width:none;margin:12px auto 14px;font-size:clamp(28px,3.7vw,46px)}
+.hero .subtitle{max-width:46ch;margin:0 auto 22px;color:var(--scene-muted)}
+.hero .button{margin:0 5px 8px}
+.studio-figure{margin:clamp(22px,3.4vw,40px) 0 0;display:flex;flex-direction:column}
+.studio-figure>a{order:1;display:block}
+.studio-figure img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:var(--scene-shadow),0 0 0 1px rgba(var(--g),.35)}
+.studio-figure::after{content:"";order:2;display:block;height:clamp(34px,5vw,60px);margin-top:3px;background:var(--shot) center bottom/100% auto no-repeat;transform:scaleY(-1);opacity:.42;-webkit-mask-image:linear-gradient(to top,#000,transparent 90%);mask-image:linear-gradient(to top,#000,transparent 90%);filter:blur(1.2px)}
+.studio-figure figcaption{order:3;margin:6px 0 0;color:var(--scene-muted);font-size:13px;line-height:1.5}
+.studio-figure figcaption a{display:inline-block;margin-left:8px;color:var(--scene-ink);font-weight:600;text-underline-offset:3px}
+@media(max-width:520px){.hero{border-radius:20px}.studio-figure figcaption a{display:block;margin:2px 0 0}}

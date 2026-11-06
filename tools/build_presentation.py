@@ -15,6 +15,8 @@ LANGS = ('ru', 'de', 'en')
 PROFILE = 'https://popovantondev.github.io/popovantondev/'
 PAGES = 'https://popovantondev.github.io/'
 LANG_NAMES = {'ru': 'RU', 'de': 'DE', 'en': 'EN'}
+LANG_TITLES = {'ru': 'Русский', 'de': 'Deutsch', 'en': 'English'}
+PEDAL_ORDER = ('ru', 'en', 'de')  # left, middle, right pedal of the app (the shape of the brass pedal follows the position)
 
 TEXT = {
     'ru': dict(
@@ -24,7 +26,7 @@ TEXT = {
         flow='Как это работает', bento='Что внутри', bento_sub='Установка, функции, передача данных и проверка.', inst='Установка',
         feat='Функции', checks='Проверено', release='Выпуск', preview='Предварительная версия', only='Только исходники',
         shot='Демонстрационный интерфейс с искусственными данными. Открыть изображение целиком.',
-        illustration='Демонстрационная иллюстрация, не снимок работающей программы. Открыть целиком.',
+        illustration='Демонстрационная иллюстрация, не снимок работающей программы.', open_full='Открыть целиком',
         study='Демонстрация рабочего пространства на русском; локализованные снимки пока не опубликованы.',
         source_note='Готового установочного пакета нет. Инструкции описывают настройку из исходников.',
         toc='Содержание', full='Открыть изображение целиком'),
@@ -35,7 +37,7 @@ TEXT = {
         flow='So funktioniert es', bento='Was drin steckt', bento_sub='Installation, Funktionen, Datenverbindung und Prüfung.',
         inst='Installation', feat='Funktionen', checks='Geprüft', release='Release', preview='Vorabversion', only='Nur Quellcode',
         shot='Demo-Oberfläche mit künstlichen Daten. Vollständiges Bild öffnen.',
-        illustration='Demo-Illustration, kein Screenshot der laufenden Anwendung. Vollständig öffnen.',
+        illustration='Demo-Illustration, kein Screenshot der laufenden Anwendung.', open_full='Vollständig öffnen',
         study='Demo-Arbeitsbereich auf Russisch; lokalisierte Ansichten sind noch nicht veröffentlicht.',
         source_note='Kein fertiges Installationspaket. Die Anleitung beschreibt die Einrichtung aus dem Quellcode.',
         toc='Inhalt', full='Vollständiges Bild öffnen'),
@@ -46,7 +48,7 @@ TEXT = {
         flow='How it works', bento="What's inside", bento_sub='Installation, features, data flow and checks.', inst='Installation',
         feat='Features', checks='Checked', release='Release', preview='Preview', only='Source only',
         shot='Demonstration interface with artificial data. Open the full image.',
-        illustration='Demonstration illustration, not a screenshot of the running application. Open in full.',
+        illustration='Demonstration illustration, not a screenshot of the running application.', open_full='Open in full',
         study='Demonstration workspace in Russian; localized screenshots have not been published yet.',
         source_note='No ready-to-install package. The guide explains how to set up the source version.',
         toc='Contents', full='Open the full image'),
@@ -89,6 +91,14 @@ def nav_html(cfg, d, lang, page):
     langs = ''.join(
         f'<a href="{target(x)}" lang="{x}" hreflang="{x}"' + (' aria-current="page"' if x == lang else '') + f'>{LANG_NAMES[x]}</a>'
         for x in LANGS)
+    langs_html = f'<div class="ppk-langs">{langs}</div>'
+    if page == 'play':
+        # The game page keeps the brass language pedals of the app in the shared header (styles: web/play.css).
+        pedals = ''.join(
+            f'<a class="pedal-link" href="{target(x)}" lang="{x}" hreflang="{x}" aria-label="{LANG_TITLES[x]}" title="{LANG_TITLES[x]}"'
+            + (' aria-current="page"' if x == lang else '') + f'><span class="pedal-label">{LANG_NAMES[x]}</span></a>'
+            for x in PEDAL_ORDER)
+        langs_html = f'<div class="languages">{pedals}</div>'
     return (
         f'<div class="ppk-nav-wrap" id="ppk-nav-wrap">\n'
         f'  <nav class="ppk-nav" aria-label="{e(t["nav"])}">\n'
@@ -96,7 +106,7 @@ def nav_html(cfg, d, lang, page):
         f'    <span class="ppk-spacer"></span>\n'
         f'    <a class="ppk-back" href="{catalog(lang)}">{e(t["back"])}</a>\n'
         f'    <button class="ppk-search-btn" type="button" data-ppk-open-search aria-label="{e(t["search"])}"><span>{e(t["search_text"])}</span><kbd>{e(t["kbd"])}</kbd></button>\n'
-        f'    <div class="ppk-langs">{langs}</div>\n'
+        f'    {langs_html}\n'
         f'    <button class="ppk-icon-btn ppk-theme-btn" type="button" data-ppk-theme aria-label="{e(t["theme"])}"></button>\n'
         f'    <a class="ppk-icon-btn ppk-gh-btn" href="{e(d["source_url"])}" aria-label="GitHub"></a>\n'
         f'  </nav>\n</div>')
@@ -144,6 +154,7 @@ def page_css(cfg):
         + '.ppk-start h2{margin:0 0 8px}.ppk-start p{margin:0;color:var(--ppk-muted)}.ppk-start .ppk-actions{margin:0}\n'
         + '.ppk-notice{margin:14px 0 0;padding:12px 14px;border-radius:var(--ppk-radius-m);background:var(--ppk-tint);color:var(--ppk-ink);font-size:15px}\n'
         + '.ppk-stage a{display:grid;place-items:center;max-width:100%}\n'
+        + '.ppk-open{display:block;margin-top:4px;color:var(--ppk-accent);font-weight:600;text-underline-offset:3px}\n'
         + '@media (max-width:760px){.ppk-start{grid-template-columns:1fr;padding:22px}}\n')
 
 
@@ -195,6 +206,7 @@ def landing_html(cfg, d, lang):
     if not ready:
         extra = t['source_note'] + ' ' + extra
     notice = f'<p class="ppk-notice">{e(extra.strip())}</p>' if extra.strip() else ''
+    open_link = f'<a class="ppk-open" href="{e(shot)}">{e(t["open_full"])}</a>' if cfg.get('caption') == 'illustration' else ''
     guide = 'Guide-' + lang + '.html'
     title = f'{d["name"]} — {t["guide"]} · {status}'
     return f'''<!doctype html>
@@ -230,7 +242,7 @@ def landing_html(cfg, d, lang):
 </div>
 <figure class="ppk-preview">
 <div class="ppk-stage"><a href="{e(shot)}"><img src="{e(shot)}" alt="{e(d['name'])} — {e(caption)}" decoding="async"></a></div>
-<figcaption>{e(caption)}</figcaption>
+<figcaption>{e(caption)}{open_link}</figcaption>
 </figure>
 </div>
 
