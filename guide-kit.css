@@ -3,3 +3,6 @@
 .guide-note{margin:34px 0 0;padding-top:20px;border-top:1px solid var(--ppk-line);color:var(--ppk-muted);font-size:13px}
 .guide-note a{color:var(--ppk-accent)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation:none!important;transition:none!important}}
+.guide-home{margin:0 0 20px}
+body.ppk-page a.guide-home-link{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border:1px solid var(--ppk-accent);border-radius:999px;background:var(--ppk-tint);color:var(--ppk-accent);font-size:15px;font-weight:700;line-height:1.3;text-decoration:none}
+body.ppk-page a.guide-home-link:hover{background:var(--ppk-accent);color:var(--ppk-accent-ink,#fff)}
