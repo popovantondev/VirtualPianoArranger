@@ -1,9 +1,9 @@
 {
   "folder": ".",
   "shots": {
-    "ru": "assets/surface-laptop-v1.png",
-    "de": "assets/surface-laptop-de-v1.png",
-    "en": "assets/surface-laptop-en-v1.png"
+    "ru": "assets/surface-laptop-cutout-ru.webp",
+    "de": "assets/surface-laptop-cutout-de.webp",
+    "en": "assets/surface-laptop-cutout-en.webp"
   },
   "icon": "presentation-icon.png",
   "stack": "Python · PySide6",

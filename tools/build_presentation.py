@@ -153,7 +153,12 @@ def page_css(cfg):
         + '.ppk-start{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;padding:28px;border:1px solid var(--ppk-line);border-radius:var(--ppk-radius-l);background:var(--ppk-panel)}\n'
         + '.ppk-start h2{margin:0 0 8px}.ppk-start p{margin:0;color:var(--ppk-muted)}.ppk-start .ppk-actions{margin:0}\n'
         + '.ppk-notice{margin:14px 0 0;padding:12px 14px;border-radius:var(--ppk-radius-m);background:var(--ppk-tint);color:var(--ppk-ink);font-size:15px}\n'
-        + '.ppk-stage a{display:grid;place-items:center;max-width:100%}\n'
+        + '.ppk-hero-laptop{grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr);gap:24px}\n'
+        + '.laptop-hero{margin:0 -28px 0 0;text-align:center}\n'
+        + '.laptop-hero a.laptop-link{display:block}\n'
+        + '.laptop-hero img{display:block;width:100%;height:auto;filter:drop-shadow(0 16px 22px rgba(40,28,10,.22))}\n'
+        + '.laptop-hero figcaption{margin:2px auto 0;max-width:64ch;color:var(--ppk-muted);font-size:13px;line-height:1.5}\n'
+        + '@media (max-width:900px){.ppk-hero-laptop{grid-template-columns:1fr;gap:18px}.laptop-hero{margin:0}}\n'
         + '.ppk-open{display:block;margin-top:4px;color:var(--ppk-accent);font-weight:600;text-underline-offset:3px}\n'
         + '@media (max-width:760px){.ppk-start{grid-template-columns:1fr;padding:22px}}\n')
 
@@ -219,13 +224,13 @@ def landing_html(cfg, d, lang):
 <title>{e(title)}</title>
 <link rel="icon" href="{e(cfg['icon'])}">
 {head_assets(cfg)}
-<link rel="stylesheet" href="presentation.css?v={kit_version(cfg)}">
+<link rel="stylesheet" href="presentation.css?v={kit_version(cfg)}-laptop">
 </head>
 <body class="ppk-page">
 <a class="ppk-skip" href="#main">{e(t['skip'])}</a>
 {nav_html(cfg, d, lang, 'landing')}
 <main class="ppk-shell" id="main">
-<div class="ppk-hero">
+<div class="ppk-hero ppk-hero-laptop">
 <div>
 {pill_html(d, lang)}
 <h1>{e(d['name'])}</h1>
@@ -240,8 +245,8 @@ def landing_html(cfg, d, lang):
 <p class="ppk-requirements"><strong>{e(t['requirements'])}</strong>{e(d['requirements'][lang])}</p>
 {notice}
 </div>
-<figure class="ppk-preview">
-<div class="ppk-stage"><a href="{e(shot)}"><img src="{e(shot)}" alt="{e(d['name'])} — {e(caption)}" decoding="async"></a></div>
+<figure class="laptop-hero">
+<a class="laptop-link" href="{e(shot)}"><img src="{e(shot)}" alt="{e(d['name'])} — {e(caption)}" width="1496" height="974" decoding="async"></a>
 <figcaption>{e(caption)}{open_link}</figcaption>
 </figure>
 </div>
