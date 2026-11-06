@@ -49,5 +49,7 @@ html:lang(ru) .studio-figure{--shot:url(guide-hero-ru.webp)}
 .studio-figure img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:var(--scene-shadow),0 0 0 1px rgba(var(--g),.35)}
 .studio-figure::after{content:"";order:2;display:block;height:clamp(34px,5vw,60px);margin-top:3px;background:var(--shot) center bottom/100% auto no-repeat;transform:scaleY(-1);opacity:.42;-webkit-mask-image:linear-gradient(to top,#000,transparent 90%);mask-image:linear-gradient(to top,#000,transparent 90%);filter:blur(1.2px)}
 .studio-figure figcaption{order:3;margin:6px 0 0;color:var(--scene-muted);font-size:13px;line-height:1.5}
-.studio-figure figcaption a{display:inline-block;margin-left:8px;color:var(--scene-ink);font-weight:600;text-underline-offset:3px}
-@media(max-width:520px){.hero{border-radius:20px}.studio-figure figcaption a{display:block;margin:2px 0 0}}
+.studio-figure figcaption a{display:block;width:fit-content;margin:4px 0 0;color:var(--scene-ink);font-weight:600;text-underline-offset:3px}
+@media(max-width:520px){.hero{border-radius:20px}}.steps>.card:first-child{display:flex;flex-direction:column}.step-shot{display:block;width:100%;height:auto;margin-top:auto;border-radius:10px}.steps>.card:first-child p{margin-bottom:18px}
+.studio-figure figcaption{white-space:nowrap}
+@media(max-width:700px){.studio-figure figcaption{white-space:normal}}
