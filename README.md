@@ -1,10 +1,16 @@
+<div align="center">
+  <img src="presentation-icon.png" width="128" alt="Virtual Piano Arranger Symbol">
+</div>
+
 # Virtual Piano Arranger
 
-[Русский](README.ru.md) · [Deutsch](README.md) · [English](README.en.md)
+[Русский](README.ru.md) · **Deutsch** · [English](README.en.md)
 
 Ein Offline-Klavier mit Buchstabennotation, MIDI-Stimmenauswahl und Notenanpassung für eine Computertastatur mit 61 Tasten.
 
-Ein nichtkommerzielles Lern- und Demonstrationsprojekt zur Erkundung von Musiksoftware und ihren Möglichkeiten. Der Autor verkauft diese Anwendung nicht. Dies beschreibt den Projektzweck und beschränkt keine Rechte aus MIT oder den Lizenzen der Drittanbieterkomponenten. Eine Verbindung zu deren Autoren oder deren Zustimmung wird nicht behauptet.
+**Windows x64 · Deutsch / Русский / English · 0.1.0-preview.1**
+
+**[Herunterladen](https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1)** · **[Webseite](https://popovantondev.github.io/VirtualPianoArranger/)** · **[Anleitung](https://popovantondev.github.io/VirtualPianoArranger/Guide-de.html)** · **[Im Browser ausprobieren](https://popovantondev.github.io/VirtualPianoArranger/play-de.html)** · **[Fehler melden](https://github.com/popovantondev/VirtualPianoArranger/issues/new)**
 
 ![Virtual Piano Arranger](assets/readme-banner-de.svg)
 
@@ -12,7 +18,7 @@ Ein nichtkommerzielles Lern- und Demonstrationsprojekt zur Erkundung von Musikso
 
 [![Im Browser spielen](assets/play-in-browser-de.svg)](https://popovantondev.github.io/VirtualPianoArranger/play-de.html)
 
-**[Herunterladen](https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1)** · **[Anleitung](https://popovantondev.github.io/VirtualPianoArranger/Guide-de.html)** · **[Fehler melden](https://github.com/popovantondev/VirtualPianoArranger/issues/new)**
+Ein nichtkommerzielles Lern- und Demonstrationsprojekt zur Erkundung von Musiksoftware und ihren Möglichkeiten. Der Autor verkauft diese Anwendung nicht. Dies beschreibt den Projektzweck und beschränkt keine Rechte aus MIT oder den Lizenzen der Drittanbieterkomponenten. Eine Verbindung zu deren Autoren oder deren Zustimmung wird nicht behauptet.
 
 ## Funktionen
 
@@ -21,7 +27,6 @@ Ein nichtkommerzielles Lern- und Demonstrationsprojekt zur Erkundung von Musikso
 | Klavierklang und WAV | Tonart-Vorschau |
 
 
-Windows x64 · Deutsch / Русский / English · 0.1.0-preview.1
 
 [Windows-Portable herunterladen](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip) · [SHA-256](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) · [Zugehörige Quellen](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip)
 
@@ -40,6 +45,8 @@ MIDI öffnen, Stimmen anhören und auswählen. Auch MusicXML, VPA-Projekte und B
 ## Grenzen
 
 MIDI-Stimmen erklingen als Klavier, nicht mit ursprünglichen General-MIDI-Instrumenten. Manche Dateien benötigen eine ausdrückliche Zustimmung zur ungefähren Wiedergabe. Aufnahme/WAV sind lokal; andere Exportformate benötigen separat verfügbares FFmpeg. Audio-/Videotranskription und YouTube-Import sind nicht verfügbar. Erkennungsgenauigkeit, andere PCs und lange Sitzungen müssen noch geprüft werden. Die EXE ist nicht digital signiert.
+
+## Rechte und Lizenz
 
 Der eigene Anwendungscode steht unter [MIT](LICENSE). Drittanbietercode, Klaviersamples und Modelle behalten ihre jeweiligen Lizenzen; MIT ersetzt diese nicht.
 

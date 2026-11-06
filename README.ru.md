@@ -1,10 +1,16 @@
+<div align="center">
+  <img src="presentation-icon.png" width="128" alt="Значок Virtual Piano Arranger">
+</div>
+
 # Virtual Piano Arranger
 
-[Русский](README.ru.md) · [Deutsch](README.md) · [English](README.en.md)
+**Русский** · [Deutsch](README.md) · [English](README.en.md)
 
 Офлайн-пианино с буквенной записью, выбором партий MIDI и адаптацией нот для компьютерной клавиатуры из 61 клавиши.
 
-Учебный некоммерческий демонстрационный проект: изучение музыкального ПО и показ его возможностей. Автор не продаёт приложение. Это описание цели проекта, а не ограничение прав, предоставленных MIT и лицензиями сторонних компонентов. Проект не заявляет о связи с авторами этих компонентов или об их одобрении.
+**Windows x64 · Русский / Deutsch / English · 0.1.0-preview.1**
+
+**[Скачать](https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1)** · **[Сайт](https://popovantondev.github.io/VirtualPianoArranger/index-ru.html)** · **[Руководство](https://popovantondev.github.io/VirtualPianoArranger/Guide-ru.html)** · **[Попробовать в браузере](https://popovantondev.github.io/VirtualPianoArranger/play-ru.html)** · **[Сообщить об ошибке](https://github.com/popovantondev/VirtualPianoArranger/issues/new)**
 
 ![Virtual Piano Arranger](assets/readme-banner-ru.svg)
 
@@ -12,7 +18,7 @@
 
 [![Играть в браузере](assets/play-in-browser-ru.svg)](https://popovantondev.github.io/VirtualPianoArranger/play-ru.html)
 
-**[Скачать](https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1)** · **[Руководство](https://popovantondev.github.io/VirtualPianoArranger/Guide-ru.html)** · **[Сообщить об ошибке](https://github.com/popovantondev/VirtualPianoArranger/issues/new)**
+Учебный некоммерческий демонстрационный проект: изучение музыкального ПО и показ его возможностей. Автор не продаёт приложение. Это описание цели проекта, а не ограничение прав, предоставленных MIT и лицензиями сторонних компонентов. Проект не заявляет о связи с авторами этих компонентов или об их одобрении.
 
 ## Возможности
 
@@ -21,7 +27,6 @@
 | Озвучка и WAV | Предпросмотр тональности |
 
 
-Windows x64 · Русский / Deutsch / English · 0.1.0-preview.1
 
 [Скачать portable для Windows](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip) · [SHA-256](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) · [Соответствующие исходники](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip)
 
@@ -40,6 +45,8 @@ Windows x64 · Русский / Deutsch / English · 0.1.0-preview.1
 ## Ограничения
 
 MIDI звучит пианино, а не исходными инструментами General MIDI. Для некоторых файлов требуется согласие на приблизительное проигрывание. Запись/WAV работают локально; другие форматы экспорта требуют отдельно доступного FFmpeg. Распознавание аудио/видео и импорт YouTube пока не доступны. Точность распознавания, другой ПК и длинные сеансы ещё требуют проверки. EXE без цифровой подписи.
+
+## Права и лицензия
 
 Собственный код приложения распространяется по [MIT](LICENSE). Сторонний код, сэмплы пианино и модели сохраняют свои лицензии: MIT их не заменяет.
 
