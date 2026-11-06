@@ -1,4 +1,10 @@
+# Virtual Piano Arranger
+
 [Русский](README.ru.md) · [Deutsch](README.md) · [English](README.en.md)
+
+Ein Offline-Klavier mit Buchstabennotation, MIDI-Stimmenauswahl und Notenanpassung für eine Computertastatur mit 61 Tasten.
+
+Ein nichtkommerzielles Lern- und Demonstrationsprojekt zur Erkundung von Musiksoftware und ihren Möglichkeiten. Der Autor verkauft diese Anwendung nicht. Dies beschreibt den Projektzweck und beschränkt keine Rechte aus MIT oder den Lizenzen der Drittanbieterkomponenten. Eine Verbindung zu deren Autoren oder deren Zustimmung wird nicht behauptet.
 
 ![Virtual Piano Arranger](assets/readme-banner-de.svg)
 
@@ -14,11 +20,6 @@
 |---|---|
 | Klavierklang und WAV | Tonart-Vorschau |
 
-# Virtual Piano Arranger
-
-Ein Offline-Klavier mit Buchstabennotation, MIDI-Stimmenauswahl und Notenanpassung für eine Computertastatur mit 61 Tasten.
-
-Ein nichtkommerzielles Lern- und Demonstrationsprojekt zur Erkundung von Musiksoftware und ihren Möglichkeiten. Der Autor verkauft diese Anwendung nicht. Dies beschreibt den Projektzweck und beschränkt keine Rechte aus MIT oder den Lizenzen der Drittanbieterkomponenten. Eine Verbindung zu deren Autoren oder deren Zustimmung wird nicht behauptet.
 
 Windows x64 · Deutsch / Русский / English · 0.1.0-preview.1
 

@@ -1,4 +1,10 @@
+# Virtual Piano Arranger
+
 [Русский](README.ru.md) · [Deutsch](README.md) · [English](README.en.md)
+
+An offline piano with letter notation, MIDI part selection and score adaptation for a 61-key computer keyboard.
+
+An educational, non-commercial demonstration project for exploring music software and its capabilities. The author is not selling this application. This describes the project's purpose, not a restriction on rights granted by MIT or third-party licenses. It does not imply affiliation with or endorsement by component authors.
 
 ![Virtual Piano Arranger](assets/readme-banner-en.svg)
 
@@ -14,11 +20,6 @@
 |---|---|
 | Piano sound and WAV | Key preview |
 
-# Virtual Piano Arranger
-
-An offline piano with letter notation, MIDI part selection and score adaptation for a 61-key computer keyboard.
-
-An educational, non-commercial demonstration project for exploring music software and its capabilities. The author is not selling this application. This describes the project's purpose, not a restriction on rights granted by MIT or third-party licenses. It does not imply affiliation with or endorsement by component authors.
 
 Windows x64 · English / Русский / Deutsch · 0.1.0-preview.1
 
