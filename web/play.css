@@ -13,6 +13,7 @@
   --gold-light: #e5c38d;
   --gold-deep: #c69c61;
   --focus: #e88930;
+  --pedal-focus: #ffe0a8;
   --gold-rgb: 223, 184, 124;
   --glass-border: rgba(var(--gold-rgb), 0.18);
   --glass-bg: linear-gradient(145deg, rgba(44, 47, 54, 0.62), rgba(30, 33, 39, 0.5));
@@ -71,6 +72,7 @@
   --glow-top: rgba(129, 92, 32, 0.16);
   --glow-side: #f1e5c9;
   --halo: radial-gradient(closest-side, rgba(176, 128, 48, 0.22), rgba(176, 128, 48, 0.07) 58%, transparent 78%);
+  --pedal-focus: #6b3f00;
   --notes: url("../assets/play-notes-light.svg");
 }
 @media (prefers-color-scheme: light) {
@@ -100,6 +102,7 @@
     --glow-top: rgba(129, 92, 32, 0.16);
     --glow-side: #f1e5c9;
     --halo: radial-gradient(closest-side, rgba(176, 128, 48, 0.22), rgba(176, 128, 48, 0.07) 58%, transparent 78%);
+    --pedal-focus: #6b3f00;
     --notes: url("../assets/play-notes-light.svg");
   }
 }
@@ -176,7 +179,7 @@ button, input, output { font: inherit; }
 .pedal-link[aria-current="page"] { --pedal-down: 3px; color: #21170b; }
 .pedal-link[aria-current="page"]::before { filter: brightness(0.85) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.55)); }
 .pedal-link:active { --pedal-down: 4px; }
-.pedal-link:focus-visible { outline: 2px solid #ffe0a8; outline-offset: 2px; }
+.pedal-link:focus-visible { outline: 2px solid var(--pedal-focus); outline-offset: 2px; }
 .ppk-nav-wrap .languages { margin-block: -6px -4px; }
 
 /* ---------- Section links under the headline: gold pills (the old header menu), the sticky header is the shared kit header ---------- */

@@ -41,6 +41,9 @@ body.ppk-page{background:radial-gradient(ellipse 90% 520px at 50% 0,rgba(var(--g
 .hero h1{max-width:none;margin:12px auto 14px;font-size:clamp(28px,3.7vw,46px)}
 .hero .subtitle{max-width:46ch;margin:0 auto 22px;color:var(--scene-muted)}
 .hero .button{margin:0 5px 8px}
+html:lang(de) .studio-figure{--shot:url(guide-hero-de.webp)}
+html:lang(en) .studio-figure{--shot:url(guide-hero-en.webp)}
+html:lang(ru) .studio-figure{--shot:url(guide-hero-ru.webp)}
 .studio-figure{margin:clamp(22px,3.4vw,40px) 0 0;display:flex;flex-direction:column}
 .studio-figure>a{order:1;display:block}
 .studio-figure img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:var(--scene-shadow),0 0 0 1px rgba(var(--g),.35)}
