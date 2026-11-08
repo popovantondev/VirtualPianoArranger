@@ -1,22 +1,31 @@
-<div align="center">
-  <img src="presentation-icon.png" width="128" alt="Virtual Piano Arranger icon">
-</div>
+<!-- ppk-readme:head:start -->
+<a href="https://popovantondev.github.io/VirtualPianoArranger/index-en.html"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/header-en-dark.7dab4f8b.svg"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/header-en-light.049c38f3.svg" width="880" height="188" alt="Virtual Piano Arranger — Offline piano, letter notation and MIDI part import. Windows · x64, Preview 0.1.0-preview.1"></picture></a>
+<!-- ppk-readme:head:end -->
 
 # Virtual Piano Arranger
 
 [Русский](README.ru.md) · [Deutsch](README.md) · **English**
 
+<!-- ppk-readme:body:start -->
+<p>
+<a href="https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-download-en-dark.52376e56.svg"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-download-en-light.600b7179.svg" width="136" height="36" alt="Download"></picture></a>
+<a href="https://popovantondev.github.io/VirtualPianoArranger/index-en.html"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-website-en-dark.652b36ce.svg"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-website-en-light.171c1f4a.svg" width="120" height="36" alt="Website"></picture></a>
+<a href="https://popovantondev.github.io/VirtualPianoArranger/Guide-en.html"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-guide-en-dark.3ac5fe2c.svg"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-guide-en-light.29ab3edd.svg" width="141" height="36" alt="User guide"></picture></a>
+<a href="https://popovantondev.github.io/VirtualPianoArranger/play-en.html"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-demo-en-dark.cd2a5a34.svg"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-demo-en-light.3f610306.svg" width="209" height="36" alt="Play in the browser"></picture></a>
+<a href="https://github.com/popovantondev/VirtualPianoArranger/issues/new"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-bug-en-dark.d0c593ea.svg"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/btn-bug-en-light.d7acd16e.svg" width="196" height="36" alt="Report a problem"></picture></a>
+</p>
+
+<p><a href="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/assets/surface-laptop-cutout-en.webp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/preview-en-dark.04d3f0d4.webp"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/preview-en-light.24a63a71.webp" width="880" height="516" alt="Virtual Piano Arranger interface"></picture></a><br>
+<sub><a href="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/assets/surface-laptop-cutout-en.webp">Full screenshot</a></sub></p>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/divider-dark.4b41da9b.svg"><img src="https://raw.githubusercontent.com/popovantondev/VirtualPianoArranger/main/docs/readme/divider-light.ac096d32.svg" width="880" height="6" alt="Divider"></picture>
+<!-- ppk-readme:body:end -->
+
 An offline piano with letter notation, MIDI part selection and score adaptation for a 61-key computer keyboard.
 
 **Windows x64 · English / Русский / Deutsch · 0.1.0-preview.1**
 
-**[Download](https://github.com/popovantondev/VirtualPianoArranger/releases/tag/v0.1.0-preview.1)** · **[Website](https://popovantondev.github.io/VirtualPianoArranger/index-en.html)** · **[User guide](https://popovantondev.github.io/VirtualPianoArranger/Guide-en.html)** · **[Try in the browser](https://popovantondev.github.io/VirtualPianoArranger/play-en.html)** · **[Report a problem](https://github.com/popovantondev/VirtualPianoArranger/issues/new)**
-
-![Virtual Piano Arranger](assets/readme-banner-en.svg)
-
 *Illustrative laptop mockup; not a device compatibility test.*
-
-[![Play in the browser](assets/play-in-browser-en.svg)](https://popovantondev.github.io/VirtualPianoArranger/play-en.html)
 
 An educational, non-commercial demonstration project for exploring music software and its capabilities. The author is not selling this application. This describes the project's purpose, not a restriction on rights granted by MIT or third-party licenses. It does not imply affiliation with or endorsement by component authors.
 
@@ -25,8 +34,6 @@ An educational, non-commercial demonstration project for exploring music softwar
 | MIDI · part selection | Letter notation |
 |---|---|
 | Piano sound and WAV | Key preview |
-
-
 
 [Download Windows portable](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-windows-x64-portable.zip) · [SHA-256](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) · [Corresponding sources](https://github.com/popovantondev/VirtualPianoArranger/releases/download/v0.1.0-preview.1/VirtualPianoArranger-0.1.0-preview.1-corresponding-sources.zip)
 
