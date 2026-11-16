@@ -42,6 +42,8 @@ def css_rev(text):
     return hashlib.md5(text.encode('utf-8')).hexdigest()[:8]
 
 CSS += HOME_CSS
+PHONE_CSS = '''\n/* Phones: finger-sized links in the contents and under the pictures */\n@media(max-width:640px){.contents a,.studio-figure figcaption a{display:inline-flex;align-items:center;min-height:44px;min-width:44px}}\n'''
+CSS += PHONE_CSS
 
 
 def full_images(source, label):

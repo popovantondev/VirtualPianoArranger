@@ -561,3 +561,20 @@ kbd {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Phones (2026-11-16): finger-sized brass pedals under the header row, labels and keys at 12 px at least */
+@media (max-width: 560px) {
+  .ppk-nav-wrap .languages { order: 7; margin-left: auto; }
+  .pedal-link { width: 44px; height: 54px; }
+  .pedal-label { top: 33px; font-size: 12px; line-height: 13px; }
+  .pedal-link[lang="en"] .pedal-label { top: 34px; }
+  .pedal-link[lang="ru"] .pedal-label { transform: translate(-4px, var(--pedal-down)); }
+  .pedal-link[lang="de"] .pedal-label { transform: translate(4px, var(--pedal-down)); }
+  .piano-eyebrow, .controls-title, .group-label { font-size: 12px; }
+  .piano-label, .piano-key.black .piano-label, .piano-board[data-labels="notes"] .piano-label { font-size: 12px; }
+  .footer-links a { min-height: 44px; }
+  .controls { --control-h: 48px; }
+  .seg button { min-height: 40px; }
+  .btn, .btn.small { min-height: 44px; }
+  input[type="range"] { min-height: 44px; }
+}

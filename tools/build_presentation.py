@@ -183,7 +183,7 @@ def page_css(cfg):
         + '.laptop-hero img{display:block;width:100%;height:auto;filter:drop-shadow(0 16px 22px rgba(40,28,10,.22))}\n'
         + '.laptop-hero figcaption{margin:2px auto 0;max-width:64ch;color:var(--ppk-muted);font-size:13px;line-height:1.5}\n'
         + '@media (max-width:900px){.ppk-hero-laptop{grid-template-columns:1fr;gap:18px}.laptop-hero{margin:0}}\n'
-        + '.ppk-open{display:block;margin-top:4px;color:var(--ppk-accent);font-weight:600;text-underline-offset:3px}\n'
+        + '.ppk-open{display:flex;align-items:center;min-height:44px;margin-top:4px;color:var(--ppk-accent);font-weight:600;text-underline-offset:3px}\n'
         + '@media (max-width:760px){.ppk-start{grid-template-columns:1fr;padding:22px}}\n')
 
 
